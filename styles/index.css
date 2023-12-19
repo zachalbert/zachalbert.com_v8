@@ -3,3 +3,11 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white 
+        dark:bg-slate-800 
+        dark:text-slate-100;
+  }
+}

@@ -5,7 +5,14 @@ import cx from "classnames";
 export default function PostBody({ content }) {
   return (
     <div
-      className={cx("prose", "max-w-2xl", "mx-auto", markdownStyles.markdown)}
+      className={cx(
+        "prose",
+        "prose-slate",
+        "dark:prose-invert",
+        "max-w-2xl",
+        "mx-auto",
+        markdownStyles.markdown
+      )}
     >
       <PortableText value={content} />
     </div>
