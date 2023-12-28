@@ -2,49 +2,127 @@ import Link from "next/link";
 import cx from "classnames";
 
 export default function Logo() {
+  const svgElementClasses = [
+    "logo",
+    "absolute",
+    "opacity-40",
+    "transition-all",
+    "duration-500",
+    "ease-in",
+    "group-hover:opacity-60",
+    "group-active:opacity-80",
+    "pointer-events-none",
+  ];
   return (
     <Link
       href="/"
       className={cx(
-        "logo",
         "p-2",
-        "flex",
-        "gap-4",
-        "w-24",
-        "fill-emerald-500",
-        "opacity-40",
-        "hover:opacity-60",
-        "active:opacity-80",
+        "relative",
         "transition-all",
-        "duration-500",
-        "hover:scale-105"
+        "duration-1000",
+        "group",
+        "leading-[1]",
+        "w-40"
       )}
       title="Zac Halbert | Product Design Portfolio"
+      aria-label="Logo for the Product Design Portfolio of Zac Halbert"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="100%"
-        height="100%"
-        viewBox="0 0 78 28"
-        className="logo group"
+        width="18"
+        height="28"
+        viewBox="0 0 18 28"
+        className={cx(svgElementClasses, "top-[8px]", "left-[8px]")}
       >
         <path
-          className="fill-emerald-500"
           d="M0 5.09662C0 2.28183 2.21947 0 4.95732 0H13.0368C16.6636 0 19.0628 3.87294 17.529 7.25191L9.44956 25.0515C7.20654 29.9931 0 28.3494 0 22.8962V5.09662Z"
-        />
-        <path
-          className="fill-cyan-500"
-          d="M40 22.9034C40 25.7182 37.7805 28 35.0427 28H26.9632C23.3364 28 20.9372 24.1271 22.471 20.7481L30.5504 2.94849C32.7935 -1.99305 40 -0.349372 40 5.10376V22.9034Z"
-        />
-        <path
-          className="fill-blue-500"
-          d="M50 23C50 20.2386 52.2386 18 55 18H73C75.7614 18 78 20.2386 78 23C78 25.7614 75.7614 28 73 28H55C52.2386 28 50 25.7614 50 23Z"
-        />
-        <path
-          className="fill-violet-500"
-          d="M50 5C50 2.23858 52.2386 0 55 0H73C75.7614 0 78 2.23858 78 5C78 7.76142 75.7614 10 73 10H55C52.2386 10 50 7.76142 50 5Z"
+          className="fill-emerald-500"
         />
       </svg>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="28"
+        viewBox="0 0 18 28"
+        className={cx(
+          svgElementClasses,
+          "top-[8px]",
+          "left-[30px]",
+          "rotate-0",
+          "group-hover:rotate-180",
+          "group-hover:left-[8px]"
+        )}
+      >
+        <path
+          d="M18 22.9034C18 25.7182 15.7805 28 13.0427 28H4.96323C1.33636 28 -1.06275 24.1271 0.470997 20.7481L8.55044 2.94849C10.7935 -1.99305 18 -0.349372 18 5.10376L18 22.9034Z"
+          className="fill-cyan-500"
+        />
+      </svg>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="10"
+        viewBox="0 0 28 10"
+        className={cx(
+          svgElementClasses,
+          "top-[8px]",
+          "left-[58px]",
+          "rotate-0",
+          "group-hover:rotate-90",
+          "group-hover:left-[-1px]",
+          "group-hover:top-[17px]"
+        )}
+      >
+        <path
+          d="M0 5C0 2.23858 2.23858 0 5 0H23C25.7614 0 28 2.23858 28 5C28 7.76142 25.7614 10 23 10H5C2.23858 10 0 7.76142 0 5Z"
+          className="fill-blue-500"
+        />
+      </svg>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="10"
+        viewBox="0 0 28 10"
+        className={cx(
+          svgElementClasses,
+          "top-[26px]",
+          "left-[58px]",
+          "rotate-0",
+          "group-hover:-rotate-90",
+          "group-hover:left-[-1px]",
+          "group-hover:top-[17px]"
+        )}
+      >
+        <path
+          d="M0 5C0 2.23858 2.23858 0 5 0H23C25.7614 0 28 2.23858 28 5C28 7.76142 25.7614 10 23 10H5C2.23858 10 0 7.76142 0 5Z"
+          className="fill-violet-500"
+        />
+      </svg>
+      <span
+        className={cx(
+          "font-bold",
+          "text-gray-500",
+          "inline-block",
+          "w-0",
+          "group-hover:w-24",
+          "transition-all",
+          "duration-700",
+          "opacity-0",
+          "group-hover:opacity-100",
+          "ease-out",
+          "delay-300",
+          "ml-8",
+          "whitespace-nowrap",
+          "overflow-hidden",
+          "leading-[28px]"
+        )}
+      >
+        Zac Halbert
+      </span>
     </Link>
   );
 }
