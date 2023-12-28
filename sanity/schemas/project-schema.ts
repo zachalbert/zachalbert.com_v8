@@ -1,3 +1,5 @@
+import { defineType, defineField } from "sanity";
+
 const project = {
   name: "project",
   title: "Projects",
@@ -38,7 +40,15 @@ const project = {
       name: "content",
       title: "Content",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        { type: "block" },
+        { type: "image" },
+        defineField({
+          type: "code",
+          name: "myCodeField",
+          title: "My code field",
+        }),
+      ],
     },
   ],
 };

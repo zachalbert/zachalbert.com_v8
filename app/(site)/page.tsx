@@ -1,6 +1,7 @@
 import { getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
+import cx from "classnames";
 
 export default async function Home() {
   const projects = await getProjects();
@@ -19,7 +20,13 @@ export default async function Home() {
       <h2 className="mt-24 font-bold text-gray-700 text-3xl">Projects:</h2>
 
       <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
+        <Link
+          href={`/projects/moment-app`}
+          className={cx("p-4", "border", "rounded-lg", "font-bold")}
+        >
+          Moment
+        </Link>
+        {/* {projects.map((project) => (
           <Link
             href={`/projects/${project.slug}`}
             key={project._id}
@@ -38,7 +45,7 @@ export default async function Home() {
               {project.title}
             </div>
           </Link>
-        ))}
+        ))} */}
       </div>
     </div>
   );

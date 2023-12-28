@@ -3,6 +3,7 @@ import { deskTool } from "sanity/desk";
 
 import { resolveProductionUrl } from "./resolveProductionUrl";
 import schemas from "./sanity/schemas";
+import { codeInput } from "@sanity/code-input";
 
 const config = defineConfig({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "",
@@ -14,7 +15,7 @@ const config = defineConfig({
   basePath: "/admin",
   schema: { types: schemas },
   productionUrl: resolveProductionUrl,
-  plugins: [deskTool()],
+  plugins: [deskTool(), codeInput()],
 });
 
 export default config;
