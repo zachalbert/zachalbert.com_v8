@@ -35,7 +35,8 @@
     xl:prose-h2:text-4xl
     prose-p:max-w-prose
     prose-headings:max-w-prose
-    prose-headings:text-gray-700;
+    prose-headings:text-gray-700
+    dark:prose-headings:text-gray-400;
   }
 
   article h2 {
@@ -52,6 +53,8 @@
     @apply shadow-2xl
     rounded-lg
     mx-auto
-    my-12;
+    my-12
+    bg-gray-200
+    dark:bg-gray-800;
   }
 }

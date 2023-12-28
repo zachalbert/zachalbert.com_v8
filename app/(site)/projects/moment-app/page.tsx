@@ -164,10 +164,10 @@ export default function MomentApp() {
         </div>
       </section>
 
-      <section className="text-white/80 bg-cyan-700">
+      <section className="bg-sky-500/10">
         <div className="container">
           <div className="max-w-prose mx-auto">
-            <h2 className="text-white/80">My Approach</h2>
+            <h2>My Approach</h2>
             <p>
               I roughly followed a typical human-centered design process with
               frequent sanity checks with members of the engineering team.
@@ -326,7 +326,7 @@ export default function MomentApp() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-gray-50 to-indigo-100">
+      <section className="bg-gradient-to-br from-gray-300/20 to-indigo-400/20">
         <div className="container">
           <div className="max-w-prose mx-auto">
             <h2>Reflections</h2>
