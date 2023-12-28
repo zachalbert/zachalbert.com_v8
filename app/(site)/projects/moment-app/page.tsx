@@ -3,13 +3,18 @@ import {
   Code,
   ColorPalette,
   CropGrowth,
+  Explore,
+  ManageProtection,
   Model,
   PaintBrush,
   Product,
+  Terminal,
 } from "@carbon/icons-react";
 import cx from "classnames";
 import SkillCard from "../../components/SkillCard";
 import Image from "next/image";
+import Link from "next/link";
+import ThemeHeader, { ThemeLink } from "../../components/ThemeHeader";
 
 const imgPath = "/portfolio/moment-app";
 
@@ -172,26 +177,69 @@ export default function MomentApp() {
         </div>
       </section>
 
-      <section className="container">
+      <section className="container pb-0">
         <div className="max-w-prose mx-auto">
-          <h2>Key Product Themes</h2>
+          <h1>Key Product Themes</h1>
           <p>
             It can be a challenge to condense years worth of work into a single
             case study. Being a pre-product market fit company, very few
             projects followed a predetermined path with clear start and end
-            points.
+            points. These are the major product themes I infused into the
+            product.
           </p>
-          <p>
-            What follows are the general themes and principles I tried to
-            instill into the product based on user insights.
-          </p>
+          <div className="flex flex-col gap-2">
+            <ThemeLink
+              href="#enable-exploration"
+              className={cx(
+                "flex",
+                "items-center",
+                "gap-2",
+                "p-4",
+                "rounded-2xl",
+                "hover:bg-black/5",
+                "active:bg-black/10",
+                "no-underline"
+              )}
+              icon={Explore}
+              theme="Enable Exploration"
+            />
+            <ThemeLink
+              href="#everything-is-hackable"
+              className={cx(
+                "flex",
+                "items-center",
+                "gap-2",
+                "p-4",
+                "rounded-2xl",
+                "hover:bg-black/5",
+                "active:bg-black/10",
+                "no-underline"
+              )}
+              icon={Terminal}
+              theme="Everything is Hackable"
+            />
+            <ThemeLink
+              href="#secure-by-default"
+              className={cx(
+                "flex",
+                "items-center",
+                "gap-2",
+                "p-4",
+                "rounded-2xl",
+                "hover:bg-black/5",
+                "active:bg-black/10",
+                "no-underline"
+              )}
+              icon={ManageProtection}
+              theme="Secure By Default"
+            />
+          </div>
         </div>
       </section>
 
-      <section className="container border-t">
+      <section className="container" id="enable-exploration">
         <div className="max-w-prose mx-auto">
-          <h5>Theme</h5>
-          <h2>Enable exploration</h2>
+          <ThemeHeader icon={Explore} theme="Enable Exploration" />
           <p>
             Infrastructure engineering is a complex and ever-evolving field, so
             we knew our product had to provide tools for users to explore hard
@@ -235,10 +283,9 @@ export default function MomentApp() {
         </div>
       </section>
 
-      <section className="container border-t">
+      <section className="container border-t" id="everything-is-hackable">
         <div className="max-w-prose mx-auto">
-          <h5>Theme</h5>
-          <h2>Everything is Hackable</h2>
+          <ThemeHeader icon={Terminal} theme="Everything is Hackable" />
           <p>
             Our customers are accustomed to having full control over everything
             they do, and each had incredibly unique requirements.{" "}
@@ -276,10 +323,10 @@ export default function MomentApp() {
           </p>
         </div>
       </section>
-      <section className="container border-t">
+
+      <section className="container border-t" id="secure-by-default">
         <div className="max-w-prose mx-auto">
-          <h5>Theme</h5>
-          <h2>Secure By Default</h2>
+          <ThemeHeader icon={ManageProtection} theme="Secure by Default" />
           <p>
             A major challenge when designing this product was the typical
             security posture of our customers (paranoid for good reasons).

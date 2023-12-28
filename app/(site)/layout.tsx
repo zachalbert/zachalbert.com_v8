@@ -39,7 +39,7 @@ export default async function RootLayout({
   const currentYear = new Date().getFullYear().toString();
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className="py-12">
         <Providers>
           <div className="container">
