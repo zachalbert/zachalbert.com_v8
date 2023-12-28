@@ -36,7 +36,12 @@
     prose-p:max-w-prose
     prose-headings:max-w-prose
     prose-headings:text-gray-700
-    dark:prose-headings:text-gray-400;
+    dark:prose-headings:text-gray-400
+    prose-h5:uppercase
+    prose-h5:text-xs
+    prose-h5:tracking-widest
+    prose-h5:font-bold
+    prose-h5:opacity-60;
   }
 
   article h2 {

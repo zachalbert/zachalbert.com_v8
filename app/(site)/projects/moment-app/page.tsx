@@ -16,24 +16,37 @@ const imgPath = "/portfolio/moment-app";
 export default function MomentApp() {
   return (
     <article>
+      <section className="container">
+        <div className="max-w-prose mx-auto">
+          <h1>Moment</h1>
+          <h2 className="text-lg opacity-60 mt-2">
+            Founding Designer / Head of Design (2021 &ndash; present)
+          </h2>
+          <p>
+            I was the founding designer and first hire at Moment.dev, a company
+            founded by Microsoft and Lyft alums. We aim to make user-friendly
+            software for infrastructure engineers that allows them to combine
+            all their critical tasks and documentation in one place.
+          </p>
+        </div>
+      </section>
+
       <div className="container not-prose">
-        <video autoPlay loop muted poster={`${imgPath}/overview-poster.png`}>
+        <video
+          autoPlay
+          loop
+          controls
+          muted
+          poster={`${imgPath}/overview-poster.png`}
+        >
           <source src={`${imgPath}/overview.webm`} type="video/webm" />
         </video>
       </div>
 
       <section className="container">
         <div className="max-w-prose mx-auto">
-          <h1>Moment</h1>
-          <h2 className="text-lg opacity-60 mt-2">
-            Founding Designer / Head of Design
-          </h2>
-          <h3 className="border-t mt-16 pt-6">My Role</h3>
-          <p>
-            I was the founding designer and first hire at Moment.dev, a company
-            founded by Microsoft and Lyft alums. We aim to make user-friendly
-            software for infrastructure engineers.
-          </p>
+          <h2>My Role</h2>
+
           <p>
             I was intimately involved in every aspect of the development of the
             product. My primary focus was designing the flows, UI, design
@@ -45,50 +58,34 @@ export default function MomentApp() {
           <p>
             This is a handful of the skills I regularly practiced in this role:
           </p>
-        </div>
-        <div
-          className={cx(
-            "grid",
-            "gap-4",
-            "mt-8",
-            "sm:grid-cols-2",
-            "md:grid-cols-3",
-            "xl:grid-cols-4"
-          )}
-        >
-          <SkillCard icon={Model} title="UX and UI">
-            I designed all the primary flows and associated UI in the app,
-            collaborating with engineering to deliver a performant frontend.
-          </SkillCard>
-          <SkillCard icon={CropGrowth} title="Product Vision &amp; Strategy">
-            I worked closely with the CEO and Head of Product to define our
-            ideal customer profile and map product solutions to their problem
-            space.
-          </SkillCard>
-          <SkillCard icon={Chat} title="User Research">
-            I conducted many user interviews in collaboration with my colleagues
-            to identify user needs and goals, and evaluated our product for
-            usability.
-          </SkillCard>
-          <SkillCard icon={Product} title="Rapid Prototyping (Figma)">
-            I used rapid prototyping in Figma to quickly design solutions to get
-            feedback.
-          </SkillCard>
-          <SkillCard icon={PaintBrush} title="Brand Design">
-            Based on the founders&apos; vision, I guided and implemented the
-            brand and logo design.
-          </SkillCard>
-          <SkillCard icon={ColorPalette} title="Design System Definition">
-            I crafted a design system based on tailwind primitives to increase
-            design speed in Figma.
-          </SkillCard>
-          <SkillCard
-            icon={Code}
-            title="Frontend Development (React, Typescript, CSS, and Tailwind)"
-          >
-            I am a regular contributor to our frontend codebase and created the
-            systems that frontend developers use to style components.
-          </SkillCard>
+
+          <div className={cx("grid", "gap-4", "mt-8", "lg:grid-cols-2")}>
+            <SkillCard icon={Model} title="UX and UI">
+              Designed all user flows, app UI, and design system.
+            </SkillCard>
+            <SkillCard icon={CropGrowth} title="Product Vision &amp; Strategy">
+              Collaborated with founders to set overall product vision.
+            </SkillCard>
+            <SkillCard icon={Chat} title="User Research">
+              Conducted user interviews to understand user needs and goals, and
+              product usability.
+            </SkillCard>
+            <SkillCard icon={Product} title="Rapid Prototyping">
+              Rapid prototyping in Figma to quickly get feedback from users and
+              technical experts.
+            </SkillCard>
+            <SkillCard icon={PaintBrush} title="Brand Design">
+              Led a rebrand and logo design, and helped craft the brand voice.
+            </SkillCard>
+            <SkillCard icon={ColorPalette} title="Design System Definition">
+              Crafted a design system based on tailwind primitives to increase
+              design and development speed.
+            </SkillCard>
+            <SkillCard icon={Code} title="Frontend Development">
+              Regularly shipped code to production using CSS, React, Typescript,
+              and Tailwind.
+            </SkillCard>
+          </div>
         </div>
       </section>
 
@@ -98,20 +95,14 @@ export default function MomentApp() {
         </div>
         <div className="flex flex-col lg:gap-12">
           <Image
-            src={`${imgPath}/empty.png`}
-            alt="Starting a new Moment canvas"
+            src={`${imgPath}/component-lib.png`}
+            alt="Drag and droppable component library"
             width="1440"
             height="902"
           />
           <Image
             src={`${imgPath}/canvas-list-light.png`}
             alt="List of Moment canvases"
-            width="1440"
-            height="902"
-          />
-          <Image
-            src={`${imgPath}/component-lib.png`}
-            alt="Drag and droppable component library"
             width="1440"
             height="902"
           />
@@ -124,51 +115,31 @@ export default function MomentApp() {
         </div>
       </section>
 
-      <section className="container">
-        <div className="max-w-prose mx-auto">
-          <h2>The Challenge</h2>
-          <p>
-            This role presented a variety of unique challenges and growth
-            opportunities.
-          </p>
-          <h3>Balancing Long-Term and Short-Term</h3>
-          <p>
-            As the founding designer, I had to balance advancing the quality of
-            the product with the need to ship quickly, all while setting my own
-            benchmarks.
-          </p>
-          <h3>Insight Through Collaboration</h3>
-          <p>
-            I was designing for infrastructure engineers who are responsible for
-            keeping the internet running smoothly. While I worked hard to
-            empathize with and understand the needs and gooals of our users, I
-            had to partner with other engineers when doing user research to be
-            able to ask the right follow up questions.
-          </p>
-          <h3>0 to 1</h3>
-          <p>
-            This product was designed from scratch, and involved crafting a
-            unique rich text editing experience that combined text with a live
-            coding environment. This was an enormously challenging product to
-            create, which involved coming up with many new and innovative
-            solutions to usability and interaction problems.
-          </p>
-          <h3>A Paradigm Shift</h3>
-          <p>
-            Our users are engineers who are most comfortable with the command
-            line. We were presenting a new type of interaction paradigm for
-            them, which required time and education before they were able to
-            understand the power of the tool. Once they understood it, they were
-            able to multiply the speed and power at which they could create by
-            many multiples.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-sky-500/10">
+      <section className="bg-gradient-to-br from-sky-500/10 to-purple-500/20">
         <div className="container">
           <div className="max-w-prose mx-auto">
-            <h2>My Approach</h2>
+            <h2>The Challenge</h2>
+            <p>
+              This role presented a variety of unique challenges and growth
+              opportunities.
+            </p>
+            <p>
+              As the founding designer creating something from 0 to 1, I had to
+              balance advancing the quality of the product with the need to ship
+              quickly, all while setting my own benchmarks. The product was very
+              complex technically, which meant I had limited developer resources
+              to attain a level of design polish I and my users would be happy
+              with. I ended up taking on a lot of that work myself as a result.
+            </p>
+            <p>
+              Designing for infrastructure engineers was also a new challenge.
+              In general, these users are used to having full control over their
+              tools, and are most comfortable on the command line. Because of
+              the highly technical nature of the work, I had to train
+              engineering colleagues in user research. This added domain
+              expertise helped us to get rich data from our research.
+            </p>
+            <h2 className="border-t pt-20 mt-20">My Approach</h2>
             <p>
               I roughly followed a typical human-centered design process with
               frequent sanity checks with members of the engineering team.
@@ -203,6 +174,23 @@ export default function MomentApp() {
 
       <section className="container">
         <div className="max-w-prose mx-auto">
+          <h2>Key Product Themes</h2>
+          <p>
+            It can be a challenge to condense years worth of work into a single
+            case study. Being a pre-product market fit company, very few
+            projects followed a predetermined path with clear start and end
+            points.
+          </p>
+          <p>
+            What follows are the general themes and principles I tried to
+            instill into the product based on user insights.
+          </p>
+        </div>
+      </section>
+
+      <section className="container border-t">
+        <div className="max-w-prose mx-auto">
+          <h5>Theme</h5>
           <h2>Enable exploration</h2>
           <p>
             Infrastructure engineering is a complex and ever-evolving field, so
@@ -249,6 +237,7 @@ export default function MomentApp() {
 
       <section className="container border-t">
         <div className="max-w-prose mx-auto">
+          <h5>Theme</h5>
           <h2>Everything is Hackable</h2>
           <p>
             Our customers are accustomed to having full control over everything
@@ -289,6 +278,7 @@ export default function MomentApp() {
       </section>
       <section className="container border-t">
         <div className="max-w-prose mx-auto">
+          <h5>Theme</h5>
           <h2>Secure By Default</h2>
           <p>
             A major challenge when designing this product was the typical

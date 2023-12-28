@@ -3,6 +3,7 @@ import cx from "classnames";
 
 type IconProps = {
   size?: number | string;
+  className?: string;
 };
 
 type SkillCardProps = {
@@ -18,9 +19,11 @@ const SkillCard: React.FC<SkillCardProps> = ({
 }) => {
   return (
     <div className={cx("p-6", "border", "rounded-lg")}>
-      <Icon size={24} />
-      <h4 className="mt-4">{title}</h4>
-      <p className="mb-0">{children}</p>
+      <div className="flex gap-3">
+        <Icon size={24} className="mt-1 shrink-0" />
+        <h4 className="m-0">{title}</h4>
+      </div>
+      <p className="mt-2 mb-0">{children}</p>
     </div>
   );
 };
