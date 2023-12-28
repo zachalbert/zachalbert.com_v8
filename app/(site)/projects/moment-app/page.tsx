@@ -16,11 +16,11 @@ const imgPath = "/portfolio/moment-app";
 export default function MomentApp() {
   return (
     <article>
-      <section className="container not-prose">
+      <div className="container not-prose">
         <video autoPlay loop muted poster={`${imgPath}/overview-poster.png`}>
           <source src={`${imgPath}/overview.webm`} type="video/webm" />
         </video>
-      </section>
+      </div>
 
       <section className="container">
         <div className="max-w-prose mx-auto">
@@ -50,6 +50,7 @@ export default function MomentApp() {
           className={cx(
             "grid",
             "gap-4",
+            "mt-8",
             "sm:grid-cols-2",
             "md:grid-cols-3",
             "xl:grid-cols-4"
@@ -95,7 +96,7 @@ export default function MomentApp() {
         <div className="max-w-prose mx-auto">
           <h2>Select Screens</h2>
         </div>
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col lg:gap-12">
           <Image
             src={`${imgPath}/empty.png`}
             alt="Starting a new Moment canvas"
