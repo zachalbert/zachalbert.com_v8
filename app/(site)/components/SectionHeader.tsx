@@ -21,7 +21,14 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
 }) => {
   return (
     <div
-      className={cx("flex", "items-end", "mb-8", "gap-4", "-ml-12", className)}
+      className={cx(
+        "flex",
+        "items-end",
+        "mb-8",
+        "gap-4",
+        "md:-ml-12",
+        className
+      )}
     >
       <Icon size={32} className="mb-0.5" />
       <div>

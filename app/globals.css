@@ -57,7 +57,7 @@
   article video,
   article img {
     @apply shadow-2xl
-    rounded-3xl
+    rounded-xl
     mx-auto
     my-4
     lg:my-8

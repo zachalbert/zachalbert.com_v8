@@ -148,7 +148,7 @@ export default function MomentApp() {
             <SectionHeader
               icon={Idea}
               headline="My Approach"
-              className="border-t pt-20 mt-20"
+              className="border-t pt-8 mt-8 md:pt-20 md:mt-20"
             />
             <p>
               I follow a loose human-centered design process, maintaining and

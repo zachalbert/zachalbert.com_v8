@@ -102,7 +102,7 @@ const Gallery = ({ images }: any) => {
                 </div>
               </div>
               <div
-                className="mt-2 text-base"
+                className="hidden md:block mt-2 text-base"
                 dangerouslySetInnerHTML={{ __html: x.caption }}
               />
             </div>
