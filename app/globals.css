@@ -19,7 +19,8 @@
   }
 
   body {
-    @apply bg-white 
+    @apply min-w-[340px]
+    bg-white 
     dark:bg-gray-800 
     dark:text-gray-100;
   }
