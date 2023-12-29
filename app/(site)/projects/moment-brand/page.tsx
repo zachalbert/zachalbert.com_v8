@@ -82,14 +82,14 @@ export default function MomentBrand() {
             alt="Moment Logo on white"
             width={3904}
             height={1184}
-            className="bg-white p-16"
+            className="bg-white dark:bg-white p-16"
           />
           <Image
             src={`${imgPath}/logo-on-brand.svg`}
             alt="Moment Logo on brand"
             width={3904}
             height={1184}
-            className="bg-indigo-600 p-16"
+            className="bg-indigo-600 dark:bg-indigo-600 p-16"
           />
         </div>
       </section>
