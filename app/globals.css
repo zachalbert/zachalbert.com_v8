@@ -61,12 +61,37 @@
     prose-img:lg:my-8
     prose-img:xl:my-12
     prose-img:bg-gray-200
-    prose-img:dark:bg-gray-800;
+    prose-img:dark:bg-gray-800
+    prose-a:font-normal
+    prose-a:transition-all
+    prose-a:no-underline
+    prose-a:border-b-2
+    hover:prose-a:border-black/60
+    dark:hover:prose-a:border-white/60
+    hover:prose-a:text-black
+    dark:hover:prose-a:text-white;
   }
 
   article > section {
     @apply py-8 
     sm:py-16
     lg:py-24;
+  }
+
+  .block-link {
+    @apply border-none
+    no-underline
+    block
+    rounded-xl
+    transition-all
+    duration-300
+    ease-out
+    font-normal
+    hover:scale-[102%]
+    active:scale-100
+    hover:bg-black/5
+    active:bg-black/10
+    dark:hover:bg-white/5
+    dark:active:bg-white/10;
   }
 }

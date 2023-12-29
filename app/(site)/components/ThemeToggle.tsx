@@ -30,6 +30,8 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ className }) => {
     <button
       onClick={(e) => toggleTheme(currentTheme)}
       className={cx(className)}
+      aria-label={`Toggle ${currentTheme === "dark" ? "light" : "dark"} mode`}
+      title={`Toggle ${currentTheme === "dark" ? "light" : "dark"} mode`}
     >
       {currentTheme === "dark" ? <Moon /> : <Sun />}
     </button>

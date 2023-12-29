@@ -20,6 +20,12 @@ import SectionHeader from "../../components/SectionHeader";
 import "yet-another-react-lightbox/styles.css";
 import Gallery from "../../components/Gallery";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Moment.Dev Product Design Case Study | Zac Halbert",
+  description: "The Product Design Portfolio of Zac Halbert",
+};
 
 const imgPath = "/portfolio/moment-app";
 

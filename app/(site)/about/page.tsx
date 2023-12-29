@@ -1,4 +1,10 @@
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | Product Design Portfolio | Zac Halbert",
+  description: "The Product Design Portfolio of Zac Halbert",
+};
 
 export default function About() {
   return (

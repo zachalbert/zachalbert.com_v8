@@ -21,6 +21,7 @@ type ProjectTileProps = {
   imgPath: string;
   width: number;
   height: number;
+  priority?: boolean;
 };
 
 const ProjectTile: React.FC<ProjectTileProps> = ({
@@ -30,31 +31,17 @@ const ProjectTile: React.FC<ProjectTileProps> = ({
   imgPath,
   width,
   height,
+  priority,
 }) => {
   return (
-    <Link
-      href={href}
-      className={cx(
-        "no-underline",
-        "rounded-xl",
-        "transition-all",
-        "duration-300",
-        "ease-out",
-        "font-normal",
-        "hover:scale-[102%]",
-        "active:scale-100",
-        "hover:bg-black/5",
-        "active:bg-black/10",
-        "dark:hover:bg-white/5",
-        "dark:active:bg-white/10"
-      )}
-    >
+    <Link href={href} className="block-link">
       <Image
         src={imgPath}
         alt={description}
         width={width}
         height={height}
         className="m-0"
+        priority={priority}
       />
       <div className="p-6">
         <h3 className="mt-0 mb-2">{title}</h3>
@@ -108,6 +95,7 @@ export default async function Home() {
             description="Founding designer for a 0 to 1 product that allows engineers to centralize documentation, sensitive data, and critical actions."
             href="/projects/moment-app"
             imgPath="/portfolio/moment-app/overview-poster.png"
+            priority={true}
             width={1440}
             height={902}
           />
