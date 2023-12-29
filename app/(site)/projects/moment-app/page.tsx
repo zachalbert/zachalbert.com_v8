@@ -49,7 +49,7 @@ export default function MomentApp() {
         </div>
       </section>
 
-      <div className="container not-prose">
+      <div className="container">
         <video
           autoPlay
           loop
@@ -81,6 +81,7 @@ export default function MomentApp() {
       </div>
 
       <section className="container">
+        <hr />
         <div className="max-w-prose mx-auto">
           <SectionHeader icon={FingerprintRecognition} headline="My Role" />
 
@@ -125,7 +126,7 @@ export default function MomentApp() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-sky-500/10 to-purple-500/20">
+      <section className="bg-gradient-to-br from-sky-500/5 to-purple-500/20">
         <div className="container">
           <div className="max-w-prose mx-auto">
             <SectionHeader icon={WarningAlt} headline="The Challenge" />
@@ -145,11 +146,10 @@ export default function MomentApp() {
               along with me. This added domain expertise helped us get rich data
               from our&nbsp;research.
             </p>
-            <SectionHeader
-              icon={Idea}
-              headline="My Approach"
-              className="border-t pt-8 mt-8 md:pt-20 md:mt-20"
-            />
+
+            <hr />
+
+            <SectionHeader icon={Idea} headline="My Approach" className="" />
             <p>
               I follow a loose human-centered design process, maintaining and
               deepening my partnership with engineering throughout my work. This
@@ -342,7 +342,7 @@ export default function MomentApp() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-gray-300/20 to-indigo-400/20">
+      <section className="bg-gradient-to-br from-gray-300/20 dark:from-gray-300/5 to-indigo-400/20 dark:to-indigo-400/10">
         <div className="container">
           <div className="max-w-prose mx-auto">
             <h2>Reflections</h2>

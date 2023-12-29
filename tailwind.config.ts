@@ -37,10 +37,6 @@ module.exports = {
 
       transparent: "transparent",
     },
-    // borderColor: {
-    //   DEFAULT: "rgba(${colors.gray[500]}, 0.5)",
-    // },
-    // extend: {},
   },
   plugins: [
     require("@tailwindcss/typography"),

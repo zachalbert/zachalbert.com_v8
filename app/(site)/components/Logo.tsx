@@ -25,7 +25,6 @@ export default function Logo() {
         "leading-[1]",
         "w-40"
       )}
-      title="Zac Halbert | Product Design Portfolio"
       aria-label="Logo for the Product Design Portfolio of Zac Halbert"
     >
       <svg

@@ -8,8 +8,8 @@
   *,
   ::before,
   ::after {
-    @apply border-gray-300
-    dark:border-gray-700
+    @apply border-black/20
+    dark:border-white/20
     transition-all;
   }
 
@@ -37,32 +37,35 @@
     prose-headings:max-w-prose
     prose-headings:text-gray-700
     dark:prose-headings:text-gray-400
+    prose-h2:mt-0
     prose-h5:uppercase
     prose-h5:text-xs
     prose-h5:tracking-widest
     prose-h5:font-bold
-    prose-h5:opacity-60;
-  }
-
-  article h2 {
-    @apply mt-0;
+    prose-h5:opacity-60
+    prose-hr:border-black/20
+    dark:prose-hr:border-white/20
+    prose-video:shadow-2xl
+    prose-video:rounded-xl
+    prose-video:mx-auto
+    prose-video:my-4
+    prose-video:lg:my-8
+    prose-video:xl:my-12
+    prose-video:bg-gray-200
+    prose-video:dark:bg-gray-800
+    prose-img:shadow-2xl
+    prose-img:rounded-xl
+    prose-img:mx-auto
+    prose-img:my-4
+    prose-img:lg:my-8
+    prose-img:xl:my-12
+    prose-img:bg-gray-200
+    prose-img:dark:bg-gray-800;
   }
 
   article > section {
     @apply py-8 
     sm:py-16
     lg:py-24;
-  }
-
-  article video,
-  article img {
-    @apply shadow-2xl
-    rounded-xl
-    mx-auto
-    my-4
-    lg:my-8
-    xl:my-12
-    bg-gray-200
-    dark:bg-gray-800;
   }
 }

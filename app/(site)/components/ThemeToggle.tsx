@@ -5,7 +5,7 @@ import cx from "classnames";
 import { Sun, Moon } from "@carbon/icons-react";
 
 type ThemeToggleProps = {
-  className?: string[];
+  className?: string;
 };
 
 const ThemeToggle: React.FC<ThemeToggleProps> = ({ className }) => {
