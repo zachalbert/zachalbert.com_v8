@@ -89,7 +89,7 @@ export default async function Home() {
       <section className="border-t max-w-prose mx-auto">
         <h2>My Work</h2>
 
-        <div className="grid gap-6">
+        <div className="grid gap-12">
           <ProjectTile
             title="Moment.dev"
             description="Founding designer for a 0 to 1 product that allows engineers to centralize documentation, sensitive data, and critical actions."
@@ -98,6 +98,23 @@ export default async function Home() {
             priority={true}
             width={1440}
             height={902}
+          />
+          <ProjectTile
+            title="Moment.dev Branding"
+            description="I designed and coded the branding and marketing website for Moment."
+            href="/projects/moment-brand"
+            imgPath="/portfolio/moment-brand/overview-poster.png"
+            priority={true}
+            width={2881}
+            height={1925}
+          />
+          <ProjectTile
+            title="Metromile"
+            description="Founding designer for the Enterprise arm that made insurtech software for multinational insurance companies."
+            href="/projects/metromile"
+            imgPath="/portfolio/metromile/overview.jpeg"
+            width={4032}
+            height={3024}
           />
         </div>
       </section>

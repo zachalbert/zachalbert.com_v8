@@ -25,6 +25,7 @@ const ThemeLink: React.FC<ThemeLinkProps> = ({
       href={href}
       className={cx(
         "flex",
+        "border-none",
         "items-center",
         "gap-2",
         "p-4",
