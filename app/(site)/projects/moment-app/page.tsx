@@ -1,20 +1,25 @@
 import {
   Chat,
   Code,
-  ColorPalette,
   CropGrowth,
   Explore,
+  FingerprintRecognition,
+  Idea,
   ManageProtection,
   Model,
   PaintBrush,
   Product,
   Terminal,
+  WarningAlt,
 } from "@carbon/icons-react";
 import cx from "classnames";
 import SkillCard from "../../components/SkillCard";
 import Image from "next/image";
+import ThemeLink from "../../components/ThemeLink";
+import SectionHeader from "../../components/SectionHeader";
+import "yet-another-react-lightbox/styles.css";
+import Gallery from "../../components/Gallery";
 import Link from "next/link";
-import ThemeHeader, { ThemeLink } from "../../components/ThemeHeader";
 
 const imgPath = "/portfolio/moment-app";
 
@@ -28,10 +33,18 @@ export default function MomentApp() {
             Founding Designer / Head of Design (2021 &ndash; present)
           </h2>
           <p>
-            I was the founding designer and first hire at Moment.dev, a company
-            founded by Microsoft and Lyft alums. We aim to make user-friendly
-            software for infrastructure engineers that allows them to combine
-            all their critical tasks and documentation in one place.
+            I am the founding designer and first hire at{" "}
+            <Link
+              href="https://www.moment.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Moment.dev
+            </Link>
+            , a company founded by Microsoft and Lyft alums. We aim to make
+            user-friendly software for infrastructure engineers that allows them
+            to combine all their critical tasks and documentation in
+            one&nbsp;place.
           </p>
         </div>
       </section>
@@ -46,132 +59,110 @@ export default function MomentApp() {
         >
           <source src={`${imgPath}/overview.webm`} type="video/webm" />
         </video>
+        <Gallery
+          images={[
+            {
+              imageUrl: "/portfolio/moment-app/component-lib.png",
+              caption:
+                "The component library enabled users to select and customize prebuilt&nbsp;components",
+            },
+            {
+              imageUrl: "/portfolio/moment-app/canvas-list-light.png",
+              caption:
+                "The canvases list provided quick access to all pinned and recent&nbsp;canvases",
+            },
+            {
+              imageUrl: "/portfolio/moment-app/design-system.png",
+              caption:
+                "We managed our design system components and documentation in&nbsp;storybook",
+            },
+          ]}
+        />
       </div>
 
       <section className="container">
         <div className="max-w-prose mx-auto">
-          <h2>My Role</h2>
+          <SectionHeader icon={FingerprintRecognition} headline="My Role" />
 
           <p>
-            I was intimately involved in every aspect of the development of the
-            product. My primary focus was designing the flows, UI, design
-            system, and branding using both Figma and code (with CSS,
-            Typescript, and React). Additionally, I collaborated closely with
-            the founders and engineering team on the overall UX, product vision,
-            strategy, and frontend development.
+            As the Head of Design for an early-stage company, I am intimately
+            involved in every aspect of the development of the product. My
+            primary focus is designing the flows, UI, design system, and
+            branding using both Figma and code (with CSS, Typescript, and
+            React). Additionally, I collaborate closely with the founders and
+            engineering team on the overall UX, product vision, strategy, and
+            frontend&nbsp;development.
           </p>
           <p>
-            This is a handful of the skills I regularly practiced in this role:
+            This is a handful of the skills I regularly practice in
+            this&nbsp;role:
           </p>
 
           <div className={cx("grid", "gap-4", "mt-8", "lg:grid-cols-2")}>
             <SkillCard icon={Model} title="UX and UI">
-              Designed all user flows, app UI, and design system.
+              Designing all user flows, app UI, and design&nbsp;system.
             </SkillCard>
             <SkillCard icon={CropGrowth} title="Product Vision &amp; Strategy">
-              Collaborated with founders to set overall product vision.
+              Collaborating with founders to set overall product&nbsp;vision.
             </SkillCard>
             <SkillCard icon={Chat} title="User Research">
-              Conducted user interviews to understand user needs and goals, and
-              product usability.
+              Conducting user interviews to understand user needs, goals, and
+              product&nbsp;usability.
             </SkillCard>
             <SkillCard icon={Product} title="Rapid Prototyping">
               Rapid prototyping in Figma to quickly get feedback from users and
-              technical experts.
+              technical&nbsp;experts.
             </SkillCard>
             <SkillCard icon={PaintBrush} title="Brand Design">
-              Led a rebrand and logo design, and helped craft the brand voice.
-            </SkillCard>
-            <SkillCard icon={ColorPalette} title="Design System Definition">
-              Crafted a design system based on tailwind primitives to increase
-              design and development speed.
+              Led a rebrand and logo design, and helping craft the
+              brand&nbsp;voice.
             </SkillCard>
             <SkillCard icon={Code} title="Frontend Development">
-              Regularly shipped code to production using CSS, React, Typescript,
-              and Tailwind.
+              Regularly shipping code to production using CSS, React,
+              Typescript, and&nbsp;Tailwind.
             </SkillCard>
           </div>
-        </div>
-      </section>
-
-      <section className="container border-t">
-        <div className="max-w-prose mx-auto">
-          <h2>Select Screens</h2>
-        </div>
-        <div className="flex flex-col lg:gap-12">
-          <Image
-            src={`${imgPath}/component-lib.png`}
-            alt="Drag and droppable component library"
-            width="1440"
-            height="902"
-          />
-          <Image
-            src={`${imgPath}/canvas-list-light.png`}
-            alt="List of Moment canvases"
-            width="1440"
-            height="902"
-          />
-          <Image
-            src={`${imgPath}/design-system.png`}
-            alt="Moment's design system"
-            width="1440"
-            height="902"
-          />
         </div>
       </section>
 
       <section className="bg-gradient-to-br from-sky-500/10 to-purple-500/20">
         <div className="container">
           <div className="max-w-prose mx-auto">
-            <h2>The Challenge</h2>
-            <p>
-              This role presented a variety of unique challenges and growth
-              opportunities.
-            </p>
+            <SectionHeader icon={WarningAlt} headline="The Challenge" />
             <p>
               As the founding designer creating something from 0 to 1, I had to
-              balance advancing the quality of the product with the need to ship
-              quickly, all while setting my own benchmarks. The product was very
-              complex technically, which meant I had limited developer resources
-              to attain a level of design polish I and my users would be happy
-              with. I ended up taking on a lot of that work myself as a result.
+              balance improving product quality with the need to ship quickly,
+              all while setting my own benchmarks. The product is very complex
+              technically, which means limited developer resources for
+              interaction and visual design&nbsp;polish.
             </p>
             <p>
-              Designing for infrastructure engineers was also a new challenge.
-              In general, these users are used to having full control over their
-              tools, and are most comfortable on the command line. Because of
-              the highly technical nature of the work, I had to train
-              engineering colleagues in user research. This added domain
-              expertise helped us to get rich data from our research.
+              Designing for infrastructure engineers was also a new challenge
+              when I first began. These users are accustomed to having full
+              control over their tools, and are most comfortable with command
+              line interfaces. Because of the highly technical nature of their
+              work, I trained engineering colleagues in user research to ride
+              along with me. This added domain expertise helped us get rich data
+              from our&nbsp;research.
             </p>
-            <h2 className="border-t pt-20 mt-20">My Approach</h2>
+            <SectionHeader
+              icon={Idea}
+              headline="My Approach"
+              className="border-t pt-20 mt-20"
+            />
             <p>
-              I roughly followed a typical human-centered design process with
-              frequent sanity checks with members of the engineering team.
-            </p>
-            <p>
-              Given the domain&apos;s complexity, my approach required a
-              significantly more in-depth collaboration with my colleagues in
-              engineering. I was able to conduct frequent expert interviews with
-              them, our users, and people in the industry to understand exactly
-              how they were currently solving their problems.
-            </p>
-            <p>
-              I trained my engineering colleagues to conduct research with me
-              since deep domain knowledge was often required to guide interviews
-              to the richest areas of exploration.
+              I follow a loose human-centered design process, maintaining and
+              deepening my partnership with engineering throughout my work. This
+              partnership is critical to our success in finding customer pain
+              points, defining possible solutions, prototype and feature
+              validation, and usability&nbsp;testing.
             </p>
             <p>
-              As a designer with frontend skills, I was able to use sketching,
-              Figma, and code to quickly test ideas. My goal was always to
-              tighten feedback loops to increase the rate of learning.
-            </p>
-            <p>
-              Once the bulk of a feature was developed, I frequently jumped into
-              the front-end development tasks to alleviate the engineering
-              team&apos;s workload and increase the design polish of. This not
-              only improved UI quality but also allowed engineers to focus on
-              more impactful feature development.
+              Working on a small team means ruthless prioritization. I
+              frequently jump into the frontend codebase to alleviate the
+              engineering team&apos;s workload and increase design polish. This
+              allows me to push the UI quality forward without slowing down our
+              shipping&nbsp;velocity.
             </p>
           </div>
         </div>
@@ -182,54 +173,24 @@ export default function MomentApp() {
           <h1>Key Product Themes</h1>
           <p>
             It can be a challenge to condense years worth of work into a single
-            case study. Being a pre-product market fit company, very few
-            projects followed a predetermined path with clear start and end
-            points. These are the major product themes I infused into the
-            product.
+            case study. Since Moment is a pre-product market fit company, very
+            few projects follow a predetermined path with clear start and end
+            points. These are a few major product themes I infuse into the
+            product throughout the many projects I work&nbsp;on.
           </p>
           <div className="flex flex-col gap-2">
             <ThemeLink
               href="#enable-exploration"
-              className={cx(
-                "flex",
-                "items-center",
-                "gap-2",
-                "p-4",
-                "rounded-2xl",
-                "hover:bg-black/5",
-                "active:bg-black/10",
-                "no-underline"
-              )}
               icon={Explore}
               theme="Enable Exploration"
             />
             <ThemeLink
               href="#everything-is-hackable"
-              className={cx(
-                "flex",
-                "items-center",
-                "gap-2",
-                "p-4",
-                "rounded-2xl",
-                "hover:bg-black/5",
-                "active:bg-black/10",
-                "no-underline"
-              )}
               icon={Terminal}
               theme="Everything is Hackable"
             />
             <ThemeLink
               href="#secure-by-default"
-              className={cx(
-                "flex",
-                "items-center",
-                "gap-2",
-                "p-4",
-                "rounded-2xl",
-                "hover:bg-black/5",
-                "active:bg-black/10",
-                "no-underline"
-              )}
               icon={ManageProtection}
               theme="Secure By Default"
             />
@@ -239,11 +200,15 @@ export default function MomentApp() {
 
       <section className="container" id="enable-exploration">
         <div className="max-w-prose mx-auto">
-          <ThemeHeader icon={Explore} theme="Enable Exploration" />
+          <SectionHeader
+            icon={Explore}
+            overline="Theme"
+            headline="Enable Exploration"
+          />
           <p>
             Infrastructure engineering is a complex and ever-evolving field, so
             we knew our product had to provide tools for users to explore hard
-            problems with interesting and creative tooling.
+            problems with interesting and creative&nbsp;tooling.
           </p>
         </div>
         <Image
@@ -256,39 +221,46 @@ export default function MomentApp() {
           <h3>User Needs</h3>
           <p>
             Users needed a way to take existing todo lists, and begin to
-            automate away many of the mundane portions. However, traditional
-            linear automation doesn&apos;t work in many cases because the
-            possible solution paths are too complex. Users often resorted to
-            having documentation in one system, scripts in another, and
-            dashboards in yet another. This resulted in these things falling out
-            of sync and a very complex ecosystem.
+            automate away many of the mundane parts. However, traditional linear
+            automation doesn&apos;t work in many cases because the possible
+            solution paths are too complex. Users often resort to having
+            documentation in one system, scripts in another, and dashboards in
+            yet another. This results in these things falling out of sync, lost
+            documentation, and huge cross-functional
+            collaboration&nbsp;challenges.
           </p>
           <h3>Solution</h3>
           <p>
-            We solved this by building a notebook style interface that allowed
+            We solved this by building a notebook style interface that allows
             users to write rich text and drop in pre-made components so they can
-            place documentation, data from their systems, and rich interactive
-            experiences all in one place.
+            centralize documentation, data from internal systems, and rich
+            interactive experiences all in one&nbsp;place.
           </p>
           <p>
-            This created a sandbox environment that enabled users to explore
-            problems and pull in the relevant data or actions from vendors and
-            internal systems.
+            This sandbox environment enables users to explore problems and pull
+            in the relevant data or actions from vendors and critical
+            internal&nbsp;systems.
           </p>
           <h3>Result</h3>
           <p>
-            This interface gave users the ability to create solutions to hard
-            problems in hours or days which would normally have taken months.
+            This interface paradigm gives users the ability to create solutions
+            to hard problems in hours or days which would normally have taken
+            months. When working with customers, it is common to measure
+            efficiency increases in <em>orders of&nbsp;magnitude.</em>
           </p>
         </div>
       </section>
 
       <section className="container border-t" id="everything-is-hackable">
         <div className="max-w-prose mx-auto">
-          <ThemeHeader icon={Terminal} theme="Everything is Hackable" />
+          <SectionHeader
+            icon={Terminal}
+            overline="Theme"
+            headline="Everything is Hackable"
+          />
           <p>
             Our customers are accustomed to having full control over everything
-            they do, and each had incredibly unique requirements.{" "}
+            they do, and each company has incredibly unique&nbsp;requirements.
           </p>
         </div>
         <Image
@@ -302,34 +274,39 @@ export default function MomentApp() {
           <p>
             Software for infrastructure engineers is typically too
             one-size-fits-all. No two companies have identical tools or
-            solutions to common problems.
+            solutions to common&nbsp;problems.
           </p>
           <h3>Solution</h3>
           <p>
             Our answer was to bake <em>hackability</em> into every aspect of the
             product where customization is important, and obfuscate parts where
-            customization is not necessary. We provided a robust library of
-            premade components, and also allowed the users to see and edit every
-            line of code used to create those components. This level of control
-            was very important for our users, who are accustomed to having full
-            control over the technical systems they use every day.
+            customization is not necessary. We provide a robust library of
+            premade components and allowed users to see and edit every line of
+            code which was used to create those components. This level of
+            control is very important for our users, who need to customize
+            everything to work with their unique toolchains.
           </p>
           <h3>Result</h3>
           <p>
             The net result was that users felt significantly more confidence in
-            the product, knowing that they could truly customize it to their
+            the product knowing that they could truly customize it to their
             needs without having to take on the burden of building yet another
-            system from scratch.
+            system from&nbsp;scratch.
           </p>
         </div>
       </section>
 
       <section className="container border-t" id="secure-by-default">
         <div className="max-w-prose mx-auto">
-          <ThemeHeader icon={ManageProtection} theme="Secure by Default" />
+          <SectionHeader
+            icon={ManageProtection}
+            overline="Theme"
+            headline="Secure by Default"
+          />
           <p>
             A major challenge when designing this product was the typical
-            security posture of our customers (paranoid for good reasons).
+            security posture of our customers, which is bested described as{" "}
+            <em>paranoid</em> &mdash; but for good&nbsp;reasons.
           </p>
         </div>
         <Image
@@ -342,24 +319,25 @@ export default function MomentApp() {
           <h3>User Needs</h3>
           <p>
             A major problem we ran into was that users felt uncomfortable
-            providing a vendor access to their most critical infrastructure,
-            which could create the opportunity for security vulnerabilities.
+            providing a third-party vendor access to their most critical
+            infrastructure, which could create the opportunity for
+            security&nbsp;vulnerabilities.
           </p>
           <h3>Solution</h3>
           <p>
             We solved this with a technical solution: an authenticating proxy
-            that runs in the customer&apos;s infrastructure, that provides
-            Moment secure access to internal data and tools. While this was an
+            that runs in the customer&apos;s infrastructure which provides
+            Moment secure access to internal data and tools. While this is an
             engineering solution, it created a huge number of UX challenges such
-            as teaching users how to set up the system and how to convert their
-            Moment Canvases to point at the secure data.
+            as teaching users how to set up the system and guiding them to
+            convert their Moment Canvases to point at secure data&nbsp;sources.
           </p>
           <h3>Result</h3>
           <p>
-            In the end, this solution alleviated the concerns for our users
-            while allowing us to deliver on the vision of a tool that allows
-            users to centralize their documentation, data, and expertise in one
-            place.
+            In the end, this solution alleviated many of the security concerns
+            for our users. It also allows us to deliver on our vision of
+            offering a tool that allows users to centralize their documentation,
+            data, and expertise in one&nbsp;place.
           </p>
         </div>
       </section>
@@ -369,26 +347,31 @@ export default function MomentApp() {
           <div className="max-w-prose mx-auto">
             <h2>Reflections</h2>
             <p>
-              This was a rewarding product to work on, because the target user
-              was so very technical, but very underserved by traditional
-              software.
+              This is a rewarding product to work on because the target user is
+              so technical, while also being very underserved by
+              traditional&nbsp;software.
             </p>
             <p>
-              One major area for growth was that I needed to tune my product
-              intuition in this role. There are a variety of UX and UI best
-              practices with typical B2B software that didn&apos;t apply in the
-              same way with this target customer. For example, developers value
-              information density and UI contrast significantly more than
-              typical consumer software.
+              One major area for growth was that I needed to fine-tune my
+              product intuition to better meet the needs of infrastructure
+              engineers. There are a variety of UX and UI best practices that
+              don&apos;t apply with this target customer. For example,
+              developers value information density and UI contrast significantly
+              more than typical users of consumer software. What might feel
+              cramped to an average user would feel more comfortable for the
+              typical&nbsp;developer.
             </p>
             <p>
-              Another interesting aspect of this project was that infrastructure
-              engineers are generally invisible at most companies, until
+              Another interesting learning I&apos;ve had is that infrastructure
+              engineers are generally invisible at most companies until
               something goes wrong. When that happens, they are often expected
               to work through the night to solve problems that have the ability
-              to cost the company vast sums of money. This level of pressure
-              created a worldview that is much different than an average
-              technically-minded user of B2B software.
+              to cost the company vast sums of money if not prompty addressed.
+              This level of pressure creates a worldview that is very
+              security-minded and risk averse. It was important to internalize
+              this worldview and allow it to guide the product development
+              process so that our product could be taken seriously by
+              our&nbsp;customers.
             </p>
           </div>
         </div>
