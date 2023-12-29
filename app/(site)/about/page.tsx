@@ -1,10 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
+import cx from "classnames";
 
 export const metadata: Metadata = {
   title: "About | Product Design Portfolio | Zac Halbert",
   description: "The Product Design Portfolio of Zac Halbert",
 };
+
+const imgGridClasses = cx("m-0", "object-cover", "w-auto", "md:h-56");
 
 export default function About() {
   return (
@@ -72,6 +76,45 @@ export default function About() {
             Portland, Oregon has to&nbsp;offer.
           </p>
         </div>
+        <div className="flex flex-col md:flex-row gap-4 w-full my-12 mx-auto justify-center">
+          <Image
+            src="/photos/2.jpg"
+            alt="Zac looks at his new kitten Romulus and contemplates all the destruction this little creature will visit upon his home."
+            width="1152"
+            height="2048"
+            className={imgGridClasses}
+          />
+          <Image
+            src="/photos/3.jpg"
+            alt="Zac has just discovered there is a tulip festival in Oregon. He's not sure how he feels about it."
+            width="1536"
+            height="864"
+            className={imgGridClasses}
+          />
+
+          <Image
+            src="/photos/4.jpg"
+            alt="Zac and his wonderful partner Amanda hiking through Forest Park in Portland, Oregon"
+            width="768"
+            height="768"
+            className={imgGridClasses}
+          />
+          <Image
+            src="/photos/1.jpg"
+            alt="Zac, enjoying himself at Dolores Park with friends and thinking about the sushi he's about to eat."
+            width="1200"
+            height="1200"
+            className={imgGridClasses}
+          />
+        </div>
+        {/* <Image
+              src="/photos/5.jpg"
+              alt="Zac gives the Dad look to his coworker who just made a pun"
+              width="768"
+              height="1366"
+              className="m-0"
+            />
+          </div> */}
       </section>
     </article>
   );
