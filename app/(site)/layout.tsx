@@ -16,12 +16,6 @@ export const metadata: Metadata = {
 // Remove caching for all fetch requests in this route
 export const revalidate = 0;
 
-// TODO: only works on server components, need to figure out how to move mobile nav to child component
-// export const metadata: Metadata = {
-//   title: "Zac Halbert | Product Design Portfolio",
-//   description: "The Product Design Portfolio of Zac Halbert",
-// };
-
 export default function RootLayout({
   children,
 }: {
@@ -35,7 +29,6 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <Providers>
           <div className="flex flex-row grow relative">
-            {/* Main Content */}
             <div className="w-full flex flex-col">
               <Header />
 
@@ -50,8 +43,6 @@ export default function RootLayout({
                 </Link>
               </footer>
             </div>
-
-            {/* Mobile Menu */}
           </div>
         </Providers>
         <Analytics />
