@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 // import { getPages } from "@/sanity/sanity-utils";
 import { Providers } from "./providers";
-import cx from "classnames";
+import { Analytics } from "@vercel/analytics/react";
 import Header from "./components/Header";
 
 export const metadata: Metadata = {
@@ -52,6 +52,7 @@ export default function RootLayout({
             {/* Mobile Menu */}
           </div>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

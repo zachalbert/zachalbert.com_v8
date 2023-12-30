@@ -109,6 +109,7 @@ const Header = () => {
       <div
         className={cx(
           "fixed",
+          "z-50",
           "left-0",
           "top-0",
           "flex",
