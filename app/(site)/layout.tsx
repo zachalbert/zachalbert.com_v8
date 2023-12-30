@@ -9,6 +9,7 @@ import Header from "./components/Header";
 export const metadata: Metadata = {
   title: "Product Design Portfolio | Zac Halbert",
   description: "The Product Design Portfolio of Zac Halbert",
+  metadataBase: new URL("https://www.zachalbert.com"),
 };
 
 // Remove caching for all fetch requests in this route
