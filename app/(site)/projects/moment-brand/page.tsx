@@ -1,20 +1,8 @@
 import {
-  Chat,
-  Code,
   ColorPalette,
-  CropGrowth,
-  Explore,
-  FingerprintRecognition,
-  Idea,
   Image as ImageIcon,
-  ManageProtection,
   Microscope,
-  Model,
-  PaintBrush,
-  Product,
-  Terminal,
   TextFont,
-  WarningAlt,
   Wikis,
 } from "@carbon/icons-react";
 import cx from "classnames";
@@ -65,6 +53,13 @@ export default function MomentBrand() {
           poster={`${imgPath}/overview-poster.png`}
         >
           <source src={`${imgPath}/overview.webm`} type="video/webm" />
+          <source src={`${imgPath}/overview.mp4`} type="video/mp4" />
+          <Image
+            src={`${imgPath}/overview-poster.png`}
+            width={2881}
+            height={1925}
+            alt="The Moment.dev marketing site"
+          />
         </video>
       </section>
 

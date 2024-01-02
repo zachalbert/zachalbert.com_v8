@@ -67,6 +67,13 @@ export default function MomentApp() {
           poster={`${imgPath}/overview-poster.png`}
         >
           <source src={`${imgPath}/overview.webm`} type="video/webm" />
+          <source src={`${imgPath}/overview.mp4`} type="video/mp4" />
+          <Image
+            src={`${imgPath}/overview-poster.png`}
+            width={1440}
+            height={902}
+            alt="Moment.dev UI screenshot"
+          />
         </video>
         <Gallery
           images={[
