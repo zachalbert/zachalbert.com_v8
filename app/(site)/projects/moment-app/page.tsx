@@ -50,7 +50,8 @@ export default function MomentApp() {
             >
               Moment.dev
             </Link>
-            , a company founded by Microsoft and Lyft alums. We aim to make
+            , a company founded by Microsoft and Lyft alums. I joined to bring
+            design and startup experience to the team. Our mission is to make
             user-friendly software for infrastructure engineers that allows them
             to combine all their critical tasks and documentation in
             one&nbsp;place.
@@ -98,7 +99,6 @@ export default function MomentApp() {
       </div>
 
       <section className="container">
-        <hr />
         <div className="max-w-prose mx-auto">
           <SectionHeader icon={FingerprintRecognition} headline="My Role" />
 
@@ -112,8 +112,10 @@ export default function MomentApp() {
             frontend&nbsp;development.
           </p>
           <p>
-            This is a handful of the skills I regularly practice in
-            this&nbsp;role:
+            Another major part of my role is leveraging my 15+ years of
+            experience in startups to help the team navigate the early-stage
+            product development cycle. This is a handful of the skills I
+            regularly practice in this&nbsp;role:
           </p>
 
           <div className={cx("grid", "gap-4", "mt-8", "lg:grid-cols-2")}>
