@@ -10,6 +10,7 @@ import {
   FingerprintRecognition,
   Idea,
   ManageProtection,
+  Microscope,
   Model,
   PaintBrush,
   Product,
@@ -27,6 +28,7 @@ import "yet-another-react-lightbox/styles.css";
 import Gallery from "../../components/Gallery";
 import Link from "next/link";
 import { Metadata } from "next";
+import ProjectNav from "../../components/ProjectNav";
 
 export const metadata: Metadata = {
   title: "Metromile Product Design Case Study | Zac Halbert",
@@ -71,25 +73,6 @@ export default function Metromile() {
           I Led a Design Sprint to craft a first notice of loss flow with a
           large group of executives in Tokyo
         </div>
-        {/* <Gallery
-          images={[
-            {
-              imageUrl: "/portfolio/moment-app/component-lib.png",
-              caption:
-                "The component library enabled users to select and customize prebuilt&nbsp;components",
-            },
-            {
-              imageUrl: "/portfolio/moment-app/canvas-list-light.png",
-              caption:
-                "The canvases list provided quick access to all pinned and recent&nbsp;canvases",
-            },
-            {
-              imageUrl: "/portfolio/moment-app/design-system.png",
-              caption:
-                "We managed our design system components and documentation in&nbsp;storybook",
-            },
-          ]}
-        /> */}
       </div>
 
       <section className="container">
@@ -371,7 +354,7 @@ export default function Metromile() {
       <section className="bg-gradient-to-br from-gray-300/20 dark:from-gray-300/5 to-indigo-400/20 dark:to-indigo-400/10">
         <div className="container">
           <div className="max-w-prose mx-auto">
-            <h2>Reflections</h2>
+            <SectionHeader icon={Microscope} headline="Reflections" />
             <p>
               This role was challenging, but incredibly fun. Some of my most
               rewarding memories were running design sprints in Tokyo with 25
@@ -399,6 +382,8 @@ export default function Metromile() {
           </div>
         </div>
       </section>
+
+      <ProjectNav url="/projects/samahope" title="Samahope" />
     </article>
   );
 }

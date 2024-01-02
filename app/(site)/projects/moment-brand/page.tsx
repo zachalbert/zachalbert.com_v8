@@ -8,6 +8,7 @@ import {
   Idea,
   Image as ImageIcon,
   ManageProtection,
+  Microscope,
   Model,
   PaintBrush,
   Product,
@@ -22,6 +23,7 @@ import SectionHeader from "../../components/SectionHeader";
 import "yet-another-react-lightbox/styles.css";
 import Link from "next/link";
 import { Metadata } from "next";
+import ProjectNav from "../../components/ProjectNav";
 
 export const metadata: Metadata = {
   title: "Moment.Dev Brand Design Case Study | Zac Halbert",
@@ -35,7 +37,7 @@ export default function MomentBrand() {
     <article>
       <section className="container">
         <div className="max-w-prose mx-auto">
-          <h1>Moment Branding</h1>
+          <h1>Moment.dev Branding</h1>
           <h2 className="text-lg opacity-60 mt-2">
             Founding Designer / Head of Design (2021 &ndash; present)
           </h2>
@@ -54,7 +56,7 @@ export default function MomentBrand() {
         </div>
       </section>
 
-      <section className="container pt-0">
+      <section className="container py-0">
         <video
           autoPlay
           loop
@@ -105,7 +107,7 @@ export default function MomentBrand() {
         </div>
       </section>
 
-      <section className="container">
+      <section className="container border-t">
         <div className="max-w-prose mx-auto">
           <SectionHeader icon={ImageIcon} headline="Logo" />
 
@@ -152,7 +154,7 @@ export default function MomentBrand() {
         </div>
       </section>
 
-      <section className="container">
+      <section className="container border-t">
         <div className="max-w-prose mx-auto">
           <SectionHeader
             icon={TextFont}
@@ -217,7 +219,7 @@ export default function MomentBrand() {
         </div>
       </section>
 
-      <section className="container">
+      <section className="container border-t">
         <div className="max-w-prose mx-auto">
           <SectionHeader icon={ColorPalette} headline="Color Palette" />
 
@@ -268,7 +270,7 @@ export default function MomentBrand() {
       <section className="bg-gradient-to-br from-gray-300/20 dark:from-gray-300/5 to-indigo-400/20 dark:to-indigo-400/10">
         <div className="container">
           <div className="max-w-prose mx-auto">
-            <h2>Reflections</h2>
+            <SectionHeader icon={Microscope} headline="Reflections" />
             <p>
               The thing I&apos;m most proud of through this work is designing a
               visual system that worked well in code. Developers were able to
@@ -280,6 +282,8 @@ export default function MomentBrand() {
           </div>
         </div>
       </section>
+
+      <ProjectNav url="/projects/metromile" title="Metromile" />
     </article>
   );
 }

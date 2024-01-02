@@ -1,4 +1,5 @@
 import {
+  ArrowRight,
   Chat,
   Code,
   CropGrowth,
@@ -6,6 +7,7 @@ import {
   FingerprintRecognition,
   Idea,
   ManageProtection,
+  Microscope,
   Model,
   PaintBrush,
   Product,
@@ -21,6 +23,7 @@ import "yet-another-react-lightbox/styles.css";
 import Gallery from "../../components/Gallery";
 import Link from "next/link";
 import { Metadata } from "next";
+import ProjectNav from "../../components/ProjectNav";
 
 export const metadata: Metadata = {
   title: "Moment.Dev Product Design Case Study | Zac Halbert",
@@ -34,7 +37,7 @@ export default function MomentApp() {
     <article>
       <section className="container">
         <div className="max-w-prose mx-auto">
-          <h1>Moment</h1>
+          <h1>Moment.dev</h1>
           <h2 className="text-lg opacity-60 mt-2">
             Founding Designer / Head of Design (2021 &ndash; present)
           </h2>
@@ -351,7 +354,7 @@ export default function MomentApp() {
       <section className="bg-gradient-to-br from-gray-300/20 dark:from-gray-300/5 to-indigo-400/20 dark:to-indigo-400/10">
         <div className="container">
           <div className="max-w-prose mx-auto">
-            <h2>Reflections</h2>
+            <SectionHeader icon={Microscope} headline="Reflections" />
             <p>
               This is a rewarding product to work on because the target user is
               so technical, while also being very underserved by
@@ -382,6 +385,8 @@ export default function MomentApp() {
           </div>
         </div>
       </section>
+
+      <ProjectNav url="/projects/moment-brand" title="Moment.dev Branding" />
     </article>
   );
 }

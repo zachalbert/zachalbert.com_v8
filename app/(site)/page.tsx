@@ -116,6 +116,14 @@ export default async function Home() {
             width={4032}
             height={3024}
           />
+          <ProjectTile
+            title="Samahope"
+            description="Head of Design for a non-profit startup that crowdfunded for doctors working in rural and low-income areas providing life-saving care for women and children."
+            href="/projects/samahope"
+            imgPath="/portfolio/samahope/overview.jpg"
+            width={2312}
+            height={2278}
+          />
         </div>
       </section>
     </article>

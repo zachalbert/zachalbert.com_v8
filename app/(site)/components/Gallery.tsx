@@ -6,7 +6,7 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import cx from "classnames";
 
-const Gallery = ({ images }: any) => {
+const Gallery = ({ images, cols = 3 }: any) => {
   const [open, setOpen] = useState(false);
   const [image, setImage] = useState("");
 
@@ -52,7 +52,7 @@ const Gallery = ({ images }: any) => {
 
   return (
     <div className="w-full">
-      <div className={cx("grid", "md:grid-cols-3", "gap-6")}>
+      <div className={cx("grid", `md:grid-cols-${cols}`, "gap-6")}>
         {images.map((x: any, index: number) => {
           return (
             <div key={index}>
