@@ -1,24 +1,25 @@
 import {
   Chat,
   Code,
+  ColorPalette,
   CropGrowth,
   Explore,
   FingerprintRecognition,
   Idea,
+  Image as ImageIcon,
   ManageProtection,
   Model,
   PaintBrush,
   Product,
   Terminal,
+  TextFont,
   WarningAlt,
+  Wikis,
 } from "@carbon/icons-react";
 import cx from "classnames";
-import SkillCard from "../../components/SkillCard";
 import Image from "next/image";
-import ThemeLink from "../../components/ThemeLink";
 import SectionHeader from "../../components/SectionHeader";
 import "yet-another-react-lightbox/styles.css";
-import Gallery from "../../components/Gallery";
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -48,20 +49,7 @@ export default function MomentBrand() {
             >
               Moment.dev
             </Link>
-            , as well as all print and booth collateral.
-          </p>
-          <p>
-            The name <strong>Moment</strong> is a physics term that refers to
-            the amount of momentum needed to turn a wheel on an axle. It is a
-            metaphor for reducing the friction for a team to start working
-            smoothly and quickly&nbsp;together.
-          </p>
-          <p>
-            At the time we designed this (late 2020), OpenAI was not yet a
-            household name. While we independently arrived at our logo before
-            becoming aware of the similarities to OpenAI, we determined the
-            crossover would be minimal due to the relative obscurity of the
-            company in most circles (at that time). Whoopsies 😊
+            , as well as all print and booth&nbsp;collateral.
           </p>
         </div>
       </section>
@@ -76,301 +64,218 @@ export default function MomentBrand() {
         >
           <source src={`${imgPath}/overview.webm`} type="video/webm" />
         </video>
-        <div className="grid md:grid-cols-2 gap-8">
-          <Image
-            src={`${imgPath}/logo-on-white.svg`}
-            alt="Moment Logo on white"
-            width={3904}
-            height={1184}
-            className="bg-white dark:bg-white p-16"
-          />
-          <Image
-            src={`${imgPath}/logo-on-brand.svg`}
-            alt="Moment Logo on brand"
-            width={3904}
-            height={1184}
-            className="bg-indigo-600 dark:bg-indigo-600 p-16"
-          />
-        </div>
       </section>
 
-      {/* <section className="container">
+      <section className="container">
         <div className="max-w-prose mx-auto">
-          <SectionHeader icon={FingerprintRecognition} headline="My Role" />
-
+          <SectionHeader icon={Wikis} headline="Website" />
           <p>
-            As the Head of Design for an early-stage company, I am intimately
-            involved in every aspect of the development of the product. My
-            primary focus is designing the flows, UI, design system, and
-            branding using both Figma and code (with CSS, Typescript, and
-            React). Additionally, I collaborate closely with the founders and
-            engineering team on the overall UX, product vision, strategy, and
-            frontend&nbsp;development.
+            The Moment website was a really fun project. I designed and coded it
+            all &mdash; with the exception of some of the more complex
+            positioning behavior for the animated section. I collaborated
+            closely with the CEO and Head of Product on the&nbsp;copywriting.
           </p>
           <p>
-            This is a handful of the skills I regularly practice in
-            this&nbsp;role:
+            I hired a contract animator to create the animated illustrations
+            using Lottie, which was fast and performant. The tech stack for the
+            website was Next.js, Tailwind for styling, and deployed via Vercel
+            (just like the very website you&apos;re reading now, in&nbsp;fact).
           </p>
-
-          <div className={cx("grid", "gap-4", "mt-8", "lg:grid-cols-2")}>
-            <SkillCard icon={Model} title="UX and UI">
-              Designing all user flows, app UI, and design&nbsp;system.
-            </SkillCard>
-            <SkillCard icon={CropGrowth} title="Product Vision &amp; Strategy">
-              Collaborating with founders to set overall product&nbsp;vision.
-            </SkillCard>
-            <SkillCard icon={Chat} title="User Research">
-              Conducting user interviews to understand user needs, goals, and
-              product&nbsp;usability.
-            </SkillCard>
-            <SkillCard icon={Product} title="Rapid Prototyping">
-              Rapid prototyping in Figma to quickly get feedback from users and
-              technical&nbsp;experts.
-            </SkillCard>
-            <SkillCard icon={PaintBrush} title="Brand Design">
-              Led a rebrand and logo design, and helping craft the
-              brand&nbsp;voice.
-            </SkillCard>
-            <SkillCard icon={Code} title="Frontend Development">
-              Regularly shipping code to production using CSS, React,
-              Typescript, and&nbsp;Tailwind.
-            </SkillCard>
-          </div>
+          <p>
+            <Image
+              src={`${imgPath}/lottie.png`}
+              alt="Lottie animations illustrating the Moment product"
+              width={1657}
+              height={918}
+            />
+          </p>
+          <p>
+            The guided product tours were done with{" "}
+            <Link href="https://www.arcade.software/" target="_blank">
+              Arcade
+            </Link>
+            . A big shoutout to the team building that product. It&apos;s
+            incredibly delightful, and provided a fantastic way to show our
+            product without the complication of recording&nbsp;a&nbsp;video.
+          </p>
+          <p>
+            We launched the website in late 2023 with a very
+            positive&nbsp;reception.
+          </p>
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-sky-500/5 to-purple-500/20">
-        <div className="container">
-          <div className="max-w-prose mx-auto">
-            <SectionHeader icon={WarningAlt} headline="The Challenge" />
-            <p>
-              As the founding designer creating something from 0 to 1, I had to
-              balance improving product quality with the need to ship quickly,
-              all while setting my own benchmarks. The product is very complex
-              technically, which means limited developer resources for
-              interaction and visual design&nbsp;polish.
-            </p>
-            <p>
-              Designing for infrastructure engineers was also a new challenge
-              when I first began. These users are accustomed to having full
-              control over their tools, and are most comfortable with command
-              line interfaces. Because of the highly technical nature of their
-              work, I trained engineering colleagues in user research to ride
-              along with me. This added domain expertise helped us get rich data
-              from our&nbsp;research.
-            </p>
-
-            <hr />
-
-            <SectionHeader icon={Idea} headline="My Approach" className="" />
-            <p>
-              I follow a loose human-centered design process, maintaining and
-              deepening my partnership with engineering throughout my work. This
-              partnership is critical to our success in finding customer pain
-              points, defining possible solutions, prototype and feature
-              validation, and usability&nbsp;testing.
-            </p>
-            <p>
-              Working on a small team means ruthless prioritization. I
-              frequently jump into the frontend codebase to alleviate the
-              engineering team&apos;s workload and increase design polish. This
-              allows me to push the UI quality forward without slowing down our
-              shipping&nbsp;velocity.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="container pb-0">
+      <section className="container">
         <div className="max-w-prose mx-auto">
-          <h1>Key Product Themes</h1>
+          <SectionHeader icon={ImageIcon} headline="Logo" />
+
           <p>
-            It can be a challenge to condense years worth of work into a single
-            case study. Since Moment is a pre-product market fit company, very
-            few projects follow a predetermined path with clear start and end
-            points. These are a few major product themes I infuse into the
-            product throughout the many projects I work&nbsp;on.
+            The name <strong>Moment</strong> is a reference to a physics term (
+            <em>the 0th moment</em>) that refers to the amount of momentum
+            needed to move something, such as a wheel on an axle. It is a
+            metaphor for reducing the friction for a team to start working
+            smoothly and quickly&nbsp;together.
           </p>
-          <div className="flex flex-col gap-2">
-            <ThemeLink
-              href="#enable-exploration"
-              icon={Explore}
-              theme="Enable Exploration"
+          <p>
+            I eventually settled on imagery that evoked a spinning wheel or
+            whirlpool, which added some visual movement to the&nbsp;logo. Any
+            similarities to OpenAI (which has become a household name since we
+            launched this brand in early 2021) were
+            completely&nbsp;unintentional.
+          </p>
+          <p>
+            <Image
+              src={`${imgPath}/logo-on-white.svg`}
+              alt="Moment Logo on white"
+              width={3904}
+              height={1184}
+              className="bg-white dark:bg-white p-16"
             />
-            <ThemeLink
-              href="#everything-is-hackable"
-              icon={Terminal}
-              theme="Everything is Hackable"
+          </p>
+          <p>
+            <Image
+              src={`${imgPath}/logo-on-brand.svg`}
+              alt="Moment Logo on brand"
+              width={3904}
+              height={1184}
+              className="bg-indigo-600 dark:bg-indigo-600 p-16"
             />
-            <ThemeLink
-              href="#secure-by-default"
-              icon={ManageProtection}
-              theme="Secure By Default"
+          </p>
+          <p>
+            <Image
+              src={`${imgPath}/moment-logo-sketches.jpeg`}
+              alt="Sketches of the Moment Logo"
+              width={4032}
+              height={3024}
             />
-          </div>
+          </p>
         </div>
       </section>
 
-      <section className="container" id="enable-exploration">
+      <section className="container">
         <div className="max-w-prose mx-auto">
           <SectionHeader
-            icon={Explore}
-            overline="Theme"
-            headline="Enable Exploration"
+            icon={TextFont}
+            headline="Typography &amp; Iconography"
           />
+
           <p>
-            Infrastructure engineering is a complex and ever-evolving field, so
-            we knew our product had to provide tools for users to explore hard
-            problems with interesting and creative&nbsp;tooling.
+            There were a few major considerations when selecting typography and
+            iconography for the Moment brand. This is a brief summary of a long
+            process that involved many different font and icon tests, but these
+            principles drove my&nbsp;decision-making.
           </p>
-        </div>
-        <Image
-          src={`${imgPath}/rich-text-and-components.png`}
-          alt="Mixing rich text with components"
-          width="1440"
-          height="902"
-        />
-        <div className="max-w-prose mx-auto">
-          <h3>User Needs</h3>
+          <ol>
+            <li>
+              <strong>Readability</strong> for prose <em>and</em> monospaced
+              code. Moment is a text-dominant app, so readability had to
+              come&nbsp;first.
+            </li>
+            <li>
+              <strong>Robust</strong> selection of icons, and special characters
+              to enable&nbsp;internationalization.
+            </li>
+            <li>
+              <strong>Cohesive</strong> typography and iconography that feel
+              like they fit together without too much&nbsp;tweaking.
+            </li>
+          </ol>
           <p>
-            Users needed a way to take existing todo lists, and begin to
-            automate away many of the mundane parts. However, traditional linear
-            automation doesn&apos;t work in many cases because the possible
-            solution paths are too complex. Users often resort to having
-            documentation in one system, scripts in another, and dashboards in
-            yet another. This results in these things falling out of sync, lost
-            documentation, and huge cross-functional
-            collaboration&nbsp;challenges.
+            <Link
+              href="https://www.ibm.com/plex/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Plex</strong>
+            </Link>
+            , by IBM, was a natural choice to meet these requirements. It&apos;s
+            a superfamily that contains many weights, serif, sans, and mono that
+            are all designed to work together. On top of that, it&apos;s a part
+            of the carbon design system which has a{" "}
+            <Link
+              href="https://carbondesignsystem.com/guidelines/icons/library/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              gigantic icon library
+            </Link>{" "}
+            that works really well with Plex. It&apos;s also open&nbsp;source!
           </p>
-          <h3>Solution</h3>
           <p>
-            We solved this by building a notebook style interface that allows
-            users to write rich text and drop in pre-made components so they can
-            centralize documentation, data from internal systems, and rich
-            interactive experiences all in one&nbsp;place.
+            <Image
+              src={`${imgPath}/moment-type-icons.png`}
+              alt="IBM Plex"
+              width={1554}
+              height={966}
+            />
           </p>
           <p>
-            This sandbox environment enables users to explore problems and pull
-            in the relevant data or actions from vendors and critical
-            internal&nbsp;systems.
-          </p>
-          <h3>Result</h3>
-          <p>
-            This interface paradigm gives users the ability to create solutions
-            to hard problems in hours or days which would normally have taken
-            months. When working with customers, it is common to measure
-            efficiency increases in <em>orders of&nbsp;magnitude.</em>
+            Plex &amp; Carbon Icons were a natural choice that I don&apos;t
+            regret even after three years of working with them. Kudos to the IBM
+            team for providing such an amazing&nbsp;resource.
           </p>
         </div>
       </section>
 
-      <section className="container border-t" id="everything-is-hackable">
+      <section className="container">
         <div className="max-w-prose mx-auto">
-          <SectionHeader
-            icon={Terminal}
-            overline="Theme"
-            headline="Everything is Hackable"
-          />
-          <p>
-            Our customers are accustomed to having full control over everything
-            they do, and each company has incredibly unique&nbsp;requirements.
-          </p>
-        </div>
-        <Image
-          src={`${imgPath}/hackability.png`}
-          alt="All components in a Moment canvas are hackable"
-          width="1440"
-          height="902"
-        />
-        <div className="max-w-prose mx-auto">
-          <h3>User Needs</h3>
-          <p>
-            Software for infrastructure engineers is typically too
-            one-size-fits-all. No two companies have identical tools or
-            solutions to common&nbsp;problems.
-          </p>
-          <h3>Solution</h3>
-          <p>
-            Our answer was to bake <em>hackability</em> into every aspect of the
-            product where customization is important, and obfuscate parts where
-            customization is not necessary. We provide a robust library of
-            premade components and allowed users to see and edit every line of
-            code which was used to create those components. This level of
-            control is very important for our users, who need to customize
-            everything to work with their unique toolchains.
-          </p>
-          <h3>Result</h3>
-          <p>
-            The net result was that users felt significantly more confidence in
-            the product knowing that they could truly customize it to their
-            needs without having to take on the burden of building yet another
-            system from&nbsp;scratch.
-          </p>
-        </div>
-      </section>
+          <SectionHeader icon={ColorPalette} headline="Color Palette" />
 
-      <section className="container border-t" id="secure-by-default">
-        <div className="max-w-prose mx-auto">
-          <SectionHeader
-            icon={ManageProtection}
-            overline="Theme"
-            headline="Secure by Default"
-          />
           <p>
-            A major challenge when designing this product was the typical
-            security posture of our customers, which is bested described as{" "}
-            <em>paranoid</em> &mdash; but for good&nbsp;reasons.
+            The color palette was a difficult challenge. I needed to choose a
+            workable color palette in the early days of the product before we
+            had a clear vision for what the product would eventually become.
+            Furthermore, it had to be clear enough for developers to work with,
+            while not requiring me to be involved in every single decision.
+            Robust documentation that wouldn&apos;t fall out of date was not a
+            realistic possibility in the early stages of&nbsp;the&nbsp;company.
           </p>
-        </div>
-        <Image
-          src={`${imgPath}/atlas-setup.png`}
-          alt="Atlas onboarding setup"
-          width="1440"
-          height="902"
-        />
-        <div className="max-w-prose mx-auto">
-          <h3>User Needs</h3>
           <p>
-            A major problem we ran into was that users felt uncomfortable
-            providing a third-party vendor access to their most critical
-            infrastructure, which could create the opportunity for
-            security&nbsp;vulnerabilities.
+            I settled on creating an abstraction layer of stable design tokens
+            that developers could learn easily, which mapped to a set of
+            primitives I could change as the design system evolved with the
+            product. This diagram illustrates the&nbsp;process.
           </p>
-          <h3>Solution</h3>
           <p>
-            We solved this with a technical solution: an authenticating proxy
-            that runs in the customer&apos;s infrastructure which provides
-            Moment secure access to internal data and tools. While this is an
-            engineering solution, it created a huge number of UX challenges such
-            as teaching users how to set up the system and guiding them to
-            convert their Moment Canvases to point at secure data&nbsp;sources.
+            When the developer needs to add some UI text, they have a limited
+            set of choices. They know it&apos;ll either be{" "}
+            <code>text-primary</code>, <code>text-secondary</code>, or{" "}
+            <code>text-tertiary</code>. A semantic:primitive mapping layer then
+            points that semantic token to a CSS variable, which design has full
+            control over. Those primitive CSS variables can be changed at will
+            for each theme in the app, and the developer never has to learn
+            anything new or refactor any&nbsp;code.
           </p>
-          <h3>Result</h3>
           <p>
-            In the end, this solution alleviated many of the security concerns
-            for our users. It also allows us to deliver on our vision of
-            offering a tool that allows users to centralize their documentation,
-            data, and expertise in one&nbsp;place.
+            <Image
+              src={`${imgPath}/color-theme-structure.png`}
+              alt="Color token mapping"
+              width={2013}
+              height={558}
+            />
+          </p>
+          <p>
+            As the designer, it is much easier to control the cohesiveness of
+            the colors while ensuring they are hitting accessible contrast
+            ratios. Changing hex values in single file is a much simpler and
+            less risky thing to ship than needing to change design tokens in
+            many files. It&apos;s a system that I am very happy with, and has
+            simplified developer &amp; designer&nbsp;collaboration.
           </p>
         </div>
       </section>
-            */}
 
       <section className="bg-gradient-to-br from-gray-300/20 dark:from-gray-300/5 to-indigo-400/20 dark:to-indigo-400/10">
         <div className="container">
           <div className="max-w-prose mx-auto">
             <h2>Reflections</h2>
             <p>
-              Designing a logo for an abstract notion in physics was quite
-              difficult, but I am happy with where we ended up. One big
-              challenge for this brand is that it needed to feel comfortable for
-              developers, while also reminding them of the ease of use that
-              comes with consumer software.
-            </p>
-            <p>
-              The marketing website was fun to work on, and I hired a talented
-              animator to craft Lottie animations for the animations in the
-              center of the page.
+              The thing I&apos;m most proud of through this work is designing a
+              visual system that worked well in code. Developers were able to
+              easily understand my intentions when translating mocks into code,
+              while I retained full control to evolve the design language over
+              time. This is incredibly powerful at an early stage company where
+              things are moving rapidly and development speed is&nbsp;critical.
             </p>
           </div>
         </div>
