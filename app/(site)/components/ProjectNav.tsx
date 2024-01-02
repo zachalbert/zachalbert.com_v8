@@ -22,7 +22,7 @@ const ProjectNav: React.FC<ProjectNavProps> = ({ url, title }) => {
           "dark:group-active:bg-indigo-400/20"
         )}
       >
-        <div className="flex gap-4 justify-center flex-col md:flex-row items-center">
+        <div className="flex gap-2 md:gap-4 justify-center flex-col md:flex-row items-center">
           <h2 className="m-0 opacity-60 font-normal">Next Project:</h2>
           <h2 className="m-0">{title}</h2>
           <ArrowRight
