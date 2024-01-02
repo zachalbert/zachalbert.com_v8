@@ -76,6 +76,7 @@ export default function MomentApp() {
           />
         </video>
         <Gallery
+          cols="3"
           images={[
             {
               imageUrl: "/portfolio/moment-app/component-lib.png",

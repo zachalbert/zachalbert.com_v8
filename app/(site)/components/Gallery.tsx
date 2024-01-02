@@ -50,9 +50,20 @@ const Gallery = ({ images, cols = 3 }: any) => {
     ],
   }));
 
+  // Required for tailwind's jit creation
+  let gridCols = "";
+  switch (cols) {
+    case "2":
+      gridCols = "md:grid-cols-2";
+      break;
+    case "3":
+    default:
+      gridCols = "md:grid-cols-3";
+  }
+
   return (
     <div className="w-full">
-      <div className={cx("grid", `md:grid-cols-${cols}`, "gap-6")}>
+      <div className={cx("grid", "gap-6", gridCols)}>
         {images.map((x: any, index: number) => {
           return (
             <div key={index}>
