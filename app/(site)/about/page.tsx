@@ -37,20 +37,14 @@ export default function About() {
             </Link>{" "}
             is the best way to contact me if you want to reach&nbsp;out.
           </p>
+
           <p>
-            I&apos;ve been doing design in some form or another since I was a
-            kid. I started building websites on GeoCities in the late 90s, and
-            got completely hooked by the power and creativity of the early web.
-            Ever since then, I&apos;ve spent countless hours learning design and
-            coding to make useful and beautiful things that live on
-            the&nbsp;Internet.
-          </p>
-          <p>
-            In my career, I excel in the early exploration phases of a design
-            project. I&apos;ve gravitated towards the chaotic energy of
-            startups, even founding and selling a company of my own. My
-            colleagues and teams usually describe me as friendly, easy to work
-            with, and knowledgeable. I prefer to believe they&apos;re telling me
+            I have spent a major chunk of my career in startups as a founding
+            designer, and in helping new ideas get off the ground. I&apos;ve
+            gravitated towards the chaotic energy of new organizations, even
+            founding and selling a company of my own. My colleagues and teams
+            usually describe me as friendly, easy to work with, and
+            knowledgeable. I prefer to believe they&apos;re telling me
             the&nbsp;truth.
           </p>
           <p>
@@ -67,6 +61,14 @@ export default function About() {
             ). While I have worked on dozens of interesting projects, I am most
             proud of my work as a manager and mentor unlocking the talents of
             other&nbsp;designers.
+          </p>
+          <p>
+            I&apos;ve been doing design in some form or another since I was a
+            kid. I started building websites on GeoCities in the late 90s, and
+            got completely hooked by the power and creativity of the early web.
+            Ever since then, I&apos;ve spent countless hours learning design and
+            coding to make useful and beautiful things that live on
+            the&nbsp;Internet.
           </p>
           <p>
             When I&apos;m not at work, I&apos;m usually hanging out with my son
