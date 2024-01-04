@@ -66,6 +66,7 @@ export default async function Home() {
             alt="The profile photo of Zac Halbert"
             width="700"
             height="700"
+            priority={true}
             className={cx("rounded-full", "h-20", "w-20", "m-0")}
           />
           <h1 className="text-center md:text-left text-4xl md:text-5xl">
@@ -111,7 +112,6 @@ export default async function Home() {
             description="I designed and coded the branding and marketing website for Moment."
             href="/projects/moment-brand"
             imgPath="/portfolio/moment-brand/overview-poster.png"
-            priority={true}
             width={2855}
             height={1910}
           />
