@@ -7,6 +7,7 @@ import {
   Close,
   Document,
   Home,
+  LogoGithub,
   LogoLinkedin,
   Pen,
   TouchInteraction,
@@ -108,6 +109,15 @@ const Header: React.FC<HeaderProps> = ({ writings = 0 }) => {
           aria-label="Visit my LinkedIn"
         >
           <LogoLinkedin />
+        </Link>
+        <Link
+          href="https://github.com/zachalbert"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cx(navClasses, "p-3")}
+          aria-label="Visit my Github"
+        >
+          <LogoGithub />
         </Link>
         <ThemeToggle className={cx(navClasses, "p-3")} />
       </div>
@@ -236,6 +246,14 @@ const Header: React.FC<HeaderProps> = ({ writings = 0 }) => {
               className={cx(navClasses, "p-4", "flex gap-2 items-center")}
             >
               <LogoLinkedin /> LinkedIn
+            </Link>
+            <Link
+              href="https://github.com/zachalbert"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cx(navClasses, "p-4", "flex gap-2 items-center")}
+            >
+              <LogoGithub /> Github
             </Link>
           </div>
         </div>
