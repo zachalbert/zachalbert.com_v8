@@ -366,31 +366,22 @@ export default function MomentApp() {
           <div className="max-w-prose mx-auto">
             <SectionHeader icon={Microscope} headline="Reflections" />
             <p>
-              This is a rewarding product to work on because the target user is
-              so technical, while also being very underserved by
-              traditional&nbsp;software.
-            </p>
-            <p>
               One major area for growth was that I needed to fine-tune my
               product intuition to better meet the needs of infrastructure
-              engineers. There are a variety of UX and UI best practices that
-              don&apos;t apply with this target customer. For example,
-              developers value information density and UI contrast significantly
-              more than typical users of consumer software. What might feel
-              cramped to an average user would feel more comfortable for the
-              typical&nbsp;developer.
+              engineers. There are a variety of UX and UI best practices for
+              consumer software that don&apos;t apply. For example, developers
+              value information density and UI contrast significantly more than
+              typical users of consumer software, and are comfortable with UI
+              that an average consumer might call&nbsp;&quot;cramped.&quot;
             </p>
             <p>
-              Another interesting learning I&apos;ve had is that infrastructure
-              engineers are generally invisible at most companies until
-              something goes wrong. When that happens, they are often expected
-              to work through the night to solve problems that have the ability
-              to cost the company vast sums of money if not prompty addressed.
-              This level of pressure creates a worldview that is very
-              security-minded and risk averse. It was important to internalize
-              this worldview and allow it to guide the product development
-              process so that our product could be taken seriously by
-              our&nbsp;customers.
+              Through this role, I gained deeper insights into the mindset of
+              infrastructure engineers, their goals, and the toil that often
+              floods their day. Infrastructure engineers are very highly
+              leveraged, and work on incredibly complex systems where the stakes
+              are extremely high. They are also not well-served by existing SaaS
+              solutions, so it has been really rewarding to build tools
+              for&nbsp;them.
             </p>
           </div>
         </div>
