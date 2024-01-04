@@ -10,7 +10,6 @@ export default function Footer() {
       className={cx(
         "text-gray-600",
         "bg-gray-100",
-        "border-t",
         "dark:text-gray-400",
         "dark:bg-gray-900",
         "py-16"
@@ -27,7 +26,6 @@ export default function Footer() {
             Zac Halbert
           </Link>
         </span>
-        {/* <span className="mx-4 opacity-40">¯\_(ツ)_/¯</span> */}
       </div>
     </footer>
   );
