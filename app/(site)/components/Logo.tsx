@@ -19,11 +19,13 @@ export default function Logo() {
       className={cx(
         "p-2",
         "relative",
-        "transition-all",
+        "transition-opacity",
+        "transition-colors",
         "duration-1000",
         "group",
         "leading-[1]",
-        "w-40"
+        "w-40",
+        "active:scale-95"
       )}
       aria-label="Logo for the Product Design Portfolio of Zac Halbert"
     >
@@ -116,7 +118,7 @@ export default function Logo() {
           "opacity-0",
           "group-hover:opacity-100",
           "ease-out",
-          "delay-300",
+          "delay-100",
           "ml-8",
           "whitespace-nowrap",
           "overflow-hidden",

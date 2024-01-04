@@ -56,8 +56,8 @@ export default function MomentBrand() {
           <source src={`${imgPath}/overview.mp4`} type="video/mp4" />
           <Image
             src={`${imgPath}/overview-poster.png`}
-            width={2881}
-            height={1925}
+            width={2855}
+            height={1910}
             alt="The Moment.dev marketing site"
           />
         </video>

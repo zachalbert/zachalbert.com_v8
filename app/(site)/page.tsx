@@ -105,8 +105,8 @@ export default async function Home() {
             href="/projects/moment-brand"
             imgPath="/portfolio/moment-brand/overview-poster.png"
             priority={true}
-            width={2881}
-            height={1925}
+            width={2855}
+            height={1910}
           />
           <ProjectTile
             title="Metromile"
