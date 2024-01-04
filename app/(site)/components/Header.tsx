@@ -73,7 +73,7 @@ const Header: React.FC<HeaderProps> = ({ writings = 0 }) => {
 
   return (
     <header className="container flex items-center justify-between py-12">
-      <Logo />
+      <Logo animated={true} />
 
       {/* Desktop Nav */}
       <div className="hidden sm:flex items-center md:gap-2">

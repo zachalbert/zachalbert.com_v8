@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "./components/Header";
 import cx from "classnames";
 import { getWritings } from "@/sanity/sanity-utils";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Product Design Portfolio | Zac Halbert",
@@ -23,7 +24,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const writings = await getWritings();
-  const currentYear = new Date().getFullYear().toString();
 
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
@@ -34,27 +34,8 @@ export default async function RootLayout({
               <Header writings={writings.length} />
 
               <main className="grow">{children}</main>
-              <footer
-                className={cx(
-                  "text-gray-600",
-                  "bg-gray-100",
-                  "border-t",
-                  "dark:text-gray-400",
-                  "dark:bg-gray-900",
-                  "py-16"
-                )}
-              >
-                <div className="container flex justify-center">
-                  <Link
-                    href="/"
-                    className="px-1 hover:text-gray-800 dark:hover:text-gray-200 hover:underline"
-                  >
-                    Zac Halbert
-                  </Link>
-                  <span className="mx-4 opacity-40">¯\_(ツ)_/¯</span>
-                  &copy; {currentYear}
-                </div>
-              </footer>
+
+              <Footer />
             </div>
           </div>
         </Providers>
