@@ -3,7 +3,15 @@ import { useState } from "react";
 import cx from "classnames";
 import ThemeToggle from "./ThemeToggle";
 import Logo from "./Logo";
-import { Close, Document, Home, LogoLinkedin, User } from "@carbon/icons-react";
+import {
+  Close,
+  Document,
+  Home,
+  LogoLinkedin,
+  Pen,
+  TouchInteraction,
+  User,
+} from "@carbon/icons-react";
 import Link from "next/link";
 
 const navClasses = [
@@ -19,6 +27,8 @@ const navClasses = [
   "dark:active:bg-white/10",
   "dark:active:text-white",
 ];
+
+const navLinkClasses = ["p-4", "flex", "gap-2", "items-center"];
 
 const MobileMenuIcon = () => {
   const barClasses = cx(
@@ -54,7 +64,11 @@ const MobileMenuIcon = () => {
   );
 };
 
-const Header = () => {
+type HeaderProps = {
+  writings?: number;
+};
+
+const Header: React.FC<HeaderProps> = ({ writings = 0 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -62,7 +76,7 @@ const Header = () => {
       <Logo />
 
       {/* Desktop Nav */}
-      <div className="hidden sm:flex items-center gap-2">
+      <div className="hidden sm:flex items-center md:gap-2">
         {/* {pages.map((page) => (
                   <Link
                     key={page._id}
@@ -72,6 +86,14 @@ const Header = () => {
                     {page.title}
                   </Link>
                 ))} */}
+        <Link href="/#portfolio" className={cx(navClasses, "px-4", "py-2")}>
+          Portfolio
+        </Link>
+        {writings > 0 && (
+          <Link href="/#writing" className={cx(navClasses, "px-4", "py-2")}>
+            Writing
+          </Link>
+        )}
         <Link href="/about" className={cx(navClasses, "px-4", "py-2")}>
           About
         </Link>
@@ -172,21 +194,37 @@ const Header = () => {
             <Link
               onClick={() => setIsOpen(false)}
               href="/"
-              className={cx(navClasses, "p-4", "flex gap-2 items-center")}
+              className={cx(navClasses, navLinkClasses)}
             >
               <Home /> Home
             </Link>
             <Link
               onClick={() => setIsOpen(false)}
+              href="/#portfolio"
+              className={cx(navClasses, navLinkClasses)}
+            >
+              <TouchInteraction /> Portfolio
+            </Link>
+            {writings > 0 && (
+              <Link
+                onClick={() => setIsOpen(false)}
+                href="/#writing"
+                className={cx(navClasses, navLinkClasses)}
+              >
+                <Pen /> Writing
+              </Link>
+            )}
+            <Link
+              onClick={() => setIsOpen(false)}
               href="/about"
-              className={cx(navClasses, "p-4", "flex gap-2 items-center")}
+              className={cx(navClasses, navLinkClasses)}
             >
               <User /> About
             </Link>
             <Link
               onClick={() => setIsOpen(false)}
               href="/resume"
-              className={cx(navClasses, "p-4", "flex gap-2 items-center")}
+              className={cx(navClasses, navLinkClasses)}
             >
               <Document />
               Resume

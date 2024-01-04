@@ -1,12 +1,12 @@
 import "../globals.css";
 import Link from "next/link";
 import type { Metadata } from "next";
-// import { getPages } from "@/sanity/sanity-utils";
 import { Providers } from "./providers";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "./components/Header";
 import cx from "classnames";
+import { getWritings } from "@/sanity/sanity-utils";
 
 export const metadata: Metadata = {
   title: "Product Design Portfolio | Zac Halbert",
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 // Remove caching for all fetch requests in this route
 export const revalidate = 0;
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  // const pages = await getPages();
+  const writings = await getWritings();
   const currentYear = new Date().getFullYear().toString();
 
   return (
@@ -31,7 +31,7 @@ export default function RootLayout({
         <Providers>
           <div className="flex flex-row grow relative">
             <div className="w-full flex flex-col">
-              <Header />
+              <Header writings={writings.length} />
 
               <main className="grow">{children}</main>
               <footer
