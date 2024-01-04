@@ -69,6 +69,14 @@ export default async function Writing({ params }: Props) {
   const slug = params.writing;
   const writing = await getWriting(slug);
 
+  if (!writing) {
+    return (
+      <article className="max-w-prose mx-auto">
+        <h3 className="text-center my-24">Post not found</h3>
+      </article>
+    );
+  }
+
   return (
     <div>
       <header className="flex justify-between items-center">
