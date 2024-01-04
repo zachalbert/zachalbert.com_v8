@@ -32,7 +32,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
     >
       <Icon size={32} className="mb-0.5" />
       <div>
-        {overline && <h5>{overline}</h5>}
+        {overline && <span>{overline}</span>}
         <h2 className="mb-0">{headline}</h2>
       </div>
     </div>
