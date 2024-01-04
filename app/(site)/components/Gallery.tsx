@@ -2,42 +2,12 @@
 import { OverflowMenuHorizontal, ZoomArea, ZoomIn } from "@carbon/icons-react";
 import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import cx from "classnames";
 
 const Gallery = ({ images, cols = 3 }: any) => {
   const [open, setOpen] = useState(false);
   const [image, setImage] = useState("");
-
-  // const galleryTab = [
-  //   // you can add more image if you want
-  //   {
-  //     imageUrl: "/portfolio/moment-app/component-lib.png",
-  //     caption:
-  //       "A standard component library enabled users to select and customize prebuilt components",
-  //   },
-  //   {
-  //     imageUrl: "https://themewagon.github.io/snapshot/images/model-2.jpg",
-  //     type: "Nature",
-  //     title: "Beautiful Work",
-  //   },
-  //   {
-  //     imageUrl: "https://themewagon.github.io/snapshot/images/model-3.jpg",
-  //     type: "Nature",
-  //     title: "Beautiful Work",
-  //   },
-  //   {
-  //     imageUrl: "https://themewagon.github.io/snapshot/images/model-4.jpg",
-  //     type: "Nature",
-  //     title: "Beautiful Work",
-  //   },
-  //   {
-  //     imageUrl: "https://themewagon.github.io/snapshot/images/model-5.jpg",
-  //     type: "Nature",
-  //     title: "Beautiful Work",
-  //   },
-  // ];
 
   const slides = images.map((item: any) => ({
     src: item.imageUrl,
@@ -53,12 +23,13 @@ const Gallery = ({ images, cols = 3 }: any) => {
   // Required for tailwind's jit creation
   let gridCols = "";
   switch (cols) {
-    case "2":
+    case 2:
       gridCols = "md:grid-cols-2";
       break;
-    case "3":
+    case 3:
     default:
       gridCols = "md:grid-cols-3";
+      break;
   }
 
   return (

@@ -61,7 +61,7 @@ export default function MomentApp() {
 
       <div className="container">
         <Image
-          src={`${imgPath}/overview.jpg`}
+          src={`${imgPath}/overview.webp`}
           alt="A crowdfunding site for doctors providing life-saving care to women and children"
           width={4032}
           height={3024}
@@ -72,11 +72,11 @@ export default function MomentApp() {
           cols={2}
           images={[
             {
-              imageUrl: `${imgPath}/how-it-works.jpg`,
+              imageUrl: `${imgPath}/how-it-works.webp`,
               caption: "Explanation of how the site works",
             },
             {
-              imageUrl: `${imgPath}/treatment-buckets.jpg`,
+              imageUrl: `${imgPath}/treatment-buckets.webp`,
               caption: "The types of treatments funded by Samahope",
             },
           ]}
@@ -220,7 +220,7 @@ export default function MomentApp() {
           </p>
           <p>
             <Image
-              src={`${imgPath}/doctor-profile-full.jpg`}
+              src={`${imgPath}/doctor-profile-full.webp`}
               alt="An example of a doctor's profile page"
               width={2312}
               height={5336}
