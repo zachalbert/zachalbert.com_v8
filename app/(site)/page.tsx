@@ -1,7 +1,10 @@
-import { getProjects } from "@/sanity/sanity-utils";
+import { getWritings } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 import cx from "classnames";
+import SectionHeader from "./components/SectionHeader";
+import { Pen, TouchInteraction } from "@carbon/icons-react";
+import { useEffect } from "react";
 
 const emphasize = cx(
   "bg-gradient-to-br",
@@ -52,7 +55,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({
 };
 
 export default async function Home() {
-  const projects = await getProjects();
+  const writings = await getWritings();
 
   return (
     <article className="container">
@@ -86,10 +89,14 @@ export default async function Home() {
         </p>
       </section>
 
-      <section className="border-t max-w-prose mx-auto">
-        <h2>My Work</h2>
+      <section className="border-t max-w-prose mx-auto" id="portfolio">
+        <SectionHeader
+          icon={TouchInteraction}
+          overline="Select Projects"
+          headline="Product Design Portfolio"
+        />
 
-        <div className="grid gap-12">
+        <div className="mt-12 grid gap-12">
           <ProjectTile
             title="Moment.dev"
             description="Founding designer for a 0 to 1 product that allows engineers to centralize documentation, sensitive data, and critical actions."
@@ -126,28 +133,33 @@ export default async function Home() {
           />
         </div>
       </section>
+
+      {writings.length > 0 && (
+        <section className="border-t max-w-prose mx-auto" id="writing">
+          <SectionHeader icon={Pen} headline="Writing" />
+          {writings.map((writing) => (
+            <Link
+              href={`/writing/${writing.slug}`}
+              key={writing._id}
+              className={cx("flex", "border-none")}
+            >
+              {writing.image && (
+                <Image
+                  src={writing.image}
+                  alt={writing.title}
+                  width={750}
+                  height={300}
+                  className={cx("object-cover", "w-1/5", "m-0")}
+                />
+              )}
+              <div className={cx("flex", "flex-col")}>
+                <h3>{writing.title}</h3>
+                {writing.excerpt && <p>{writing.excerpt}</p>}
+              </div>
+            </Link>
+          ))}
+        </section>
+      )}
     </article>
   );
-}
-{
-  /* {projects.map((project) => (
-  <Link
-    href={`/projects/${project.slug}`}
-    key={project._id}
-    className="border-2 border-gray-500 rounded-lg p-1 hover:scale-105 hover:border-blue-500 transition"
-  >
-    {project.image && (
-      <Image
-        src={project.image}
-        alt={project.title}
-        width={750}
-        height={300}
-        className="object-cover rounded-lg border border-gray-500"
-      />
-    )}
-    <div className="mt-2 font-extrabold bg-gradient-to-r from-orange-400 to-purple-600 bg-clip-text text-transparent">
-      {project.title}
-    </div>
-  </Link>
-))} */
 }
