@@ -75,9 +75,7 @@ export default async function Home() {
         </div>
 
         <p>
-          I&apos;m a product design leader, mentor, frontend developer, and
-          entrepreneur with nearly two decades of experience. Currently, I am
-          the <strong>Head of Design</strong> at{" "}
+          I am currently the <strong>Head of Design</strong> at{" "}
           <Link
             href="https://www.moment.dev/"
             target="_blank"
@@ -85,8 +83,17 @@ export default async function Home() {
           >
             Moment.dev
           </Link>
-          , where I&apos;m part of a team designing tools for
-          infrastructure&nbsp;engineers.
+          . I&apos;m also a product design leader, mentor, frontend developer,
+          and entrepreneur with nearly two decades of experience, 8 in design
+          leadership and management. I also volunteer as a design mentor:{" "}
+          <Link
+            href="https://adplist.org/mentors/zac-halbert"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            book time with me&nbsp;on&nbsp;ADPList
+          </Link>
+          .
         </p>
       </section>
 
