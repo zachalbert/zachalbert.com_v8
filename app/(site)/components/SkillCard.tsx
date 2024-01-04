@@ -20,8 +20,18 @@ const SkillCard: React.FC<SkillCardProps> = ({
   return (
     <div className={cx("p-6", "border", "rounded-lg")}>
       <div className="flex gap-3">
-        <Icon size={24} className="mt-1 shrink-0" />
-        <h4 className="m-0">{title}</h4>
+        <Icon size={24} className="mt-0.5 shrink-0" />
+        <span
+          className={cx(
+            "text-md",
+            "leading-7",
+            "font-medium",
+            "text-gray-600",
+            "dark:text-gray-400"
+          )}
+        >
+          {title}
+        </span>
       </div>
       <p className="mt-2 mb-0">{children}</p>
     </div>
