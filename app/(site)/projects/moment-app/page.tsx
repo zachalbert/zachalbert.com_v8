@@ -65,12 +65,12 @@ export default function MomentApp() {
           loop
           controls
           muted
-          poster={`${imgPath}/overview-poster.png`}
+          poster={`${imgPath}/overview-poster.webp`}
         >
           <source src={`${imgPath}/overview.webm`} type="video/webm" />
           <source src={`${imgPath}/overview.mp4`} type="video/mp4" />
           <Image
-            src={`${imgPath}/overview-poster.png`}
+            src={`${imgPath}/overview-poster.webp`}
             width={1440}
             height={902}
             alt="Moment.dev UI screenshot"
@@ -80,17 +80,17 @@ export default function MomentApp() {
           cols="3"
           images={[
             {
-              imageUrl: "/portfolio/moment-app/component-lib.png",
+              imageUrl: "/portfolio/moment-app/component-lib.webp",
               caption:
                 "The component library enabled users to select and customize prebuilt&nbsp;components",
             },
             {
-              imageUrl: "/portfolio/moment-app/canvas-list-light.png",
+              imageUrl: "/portfolio/moment-app/canvas-list-light.webp",
               caption:
                 "The canvases list provided quick access to all pinned and recent&nbsp;canvases",
             },
             {
-              imageUrl: "/portfolio/moment-app/design-system.png",
+              imageUrl: "/portfolio/moment-app/design-system.webp",
               caption:
                 "We managed our design system components and documentation in&nbsp;storybook",
             },
@@ -231,7 +231,7 @@ export default function MomentApp() {
           </p>
         </div>
         <Image
-          src={`${imgPath}/rich-text-and-components.png`}
+          src={`${imgPath}/rich-text-and-components.webp`}
           alt="Mixing rich text with components"
           width="1440"
           height="902"
@@ -283,7 +283,7 @@ export default function MomentApp() {
           </p>
         </div>
         <Image
-          src={`${imgPath}/hackability.png`}
+          src={`${imgPath}/hackability.webp`}
           alt="All components in a Moment canvas are hackable"
           width="1440"
           height="902"
@@ -329,7 +329,7 @@ export default function MomentApp() {
           </p>
         </div>
         <Image
-          src={`${imgPath}/atlas-setup.png`}
+          src={`${imgPath}/atlas-setup.webp`}
           alt="Atlas onboarding setup"
           width="1440"
           height="902"

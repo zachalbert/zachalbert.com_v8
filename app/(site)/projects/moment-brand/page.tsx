@@ -50,12 +50,12 @@ export default function MomentBrand() {
           loop
           controls
           muted
-          poster={`${imgPath}/overview-poster.png`}
+          poster={`${imgPath}/overview-poster.webp`}
         >
           <source src={`${imgPath}/overview.webm`} type="video/webm" />
           <source src={`${imgPath}/overview.mp4`} type="video/mp4" />
           <Image
-            src={`${imgPath}/overview-poster.png`}
+            src={`${imgPath}/overview-poster.webp`}
             width={2855}
             height={1910}
             alt="The Moment.dev marketing site"
@@ -80,7 +80,7 @@ export default function MomentBrand() {
           </p>
           <p>
             <Image
-              src={`${imgPath}/lottie.png`}
+              src={`${imgPath}/lottie.webp`}
               alt="Lottie animations illustrating the Moment product"
               width={1657}
               height={918}
@@ -140,7 +140,7 @@ export default function MomentBrand() {
           </p>
           <p>
             <Image
-              src={`${imgPath}/moment-logo-sketches.jpeg`}
+              src={`${imgPath}/moment-logo-sketches.webp`}
               alt="Sketches of the Moment Logo"
               width={4032}
               height={3024}
@@ -200,7 +200,7 @@ export default function MomentBrand() {
           </p>
           <p>
             <Image
-              src={`${imgPath}/moment-type-icons.png`}
+              src={`${imgPath}/moment-type-icons.webp`}
               alt="IBM Plex"
               width={1554}
               height={966}
@@ -245,7 +245,7 @@ export default function MomentBrand() {
           </p>
           <p>
             <Image
-              src={`${imgPath}/color-theme-structure.png`}
+              src={`${imgPath}/color-theme-structure.webp`}
               alt="Color token mapping"
               width={2013}
               height={558}

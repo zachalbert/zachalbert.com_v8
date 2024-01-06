@@ -62,7 +62,7 @@ export default async function Home() {
       <section className="max-w-prose mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-4 md:-ml-24">
           <Image
-            src="/zac-halbert-profile-pic.jpg"
+            src="/zac-halbert-profile-pic.webp"
             alt="The profile photo of Zac Halbert"
             width="700"
             height="700"
@@ -109,7 +109,7 @@ export default async function Home() {
             title="Moment.dev"
             description="Founding designer for a 0 to 1 product that allows engineers to centralize documentation, sensitive data, and critical actions."
             href="/projects/moment-app"
-            imgPath="/portfolio/moment-app/overview-poster.png"
+            imgPath="/portfolio/moment-app/overview-poster.webp"
             priority={true}
             width={1440}
             height={902}
@@ -118,7 +118,7 @@ export default async function Home() {
             title="Moment.dev Branding"
             description="I designed and coded the branding and marketing website for Moment."
             href="/projects/moment-brand"
-            imgPath="/portfolio/moment-brand/overview-poster.png"
+            imgPath="/portfolio/moment-brand/overview-poster.webp"
             width={2855}
             height={1910}
           />
@@ -126,7 +126,7 @@ export default async function Home() {
             title="Metromile"
             description="Founding designer for the Enterprise arm that made insurtech software for multinational insurance companies."
             href="/projects/metromile"
-            imgPath="/portfolio/metromile/overview.jpeg"
+            imgPath="/portfolio/metromile/overview.webp"
             width={4032}
             height={3024}
           />

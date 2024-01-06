@@ -62,7 +62,7 @@ export default function Metromile() {
 
       <div className="container">
         <Image
-          src={`${imgPath}/overview.jpeg`}
+          src={`${imgPath}/overview.webp`}
           alt="Metromile Enterprise"
           width={4032}
           height={3024}
@@ -217,7 +217,7 @@ export default function Metromile() {
           </p>
         </div>
         <Image
-          src={`${imgPath}/streamline.png`}
+          src={`${imgPath}/streamline.webp`}
           alt="Metromile Enterprise Streamline UI"
           width="1160"
           height="1034"
@@ -248,7 +248,7 @@ export default function Metromile() {
           </p>
         </div>
         <Image
-          src={`${imgPath}/detect.png`}
+          src={`${imgPath}/detect.webp`}
           alt="Metromile Enterprise Detect UI"
           width="1440"
           height="1568"
@@ -289,13 +289,13 @@ export default function Metromile() {
           </p>
         </div>
         <Image
-          src={`${imgPath}/form-designer.png`}
+          src={`${imgPath}/form-designer.webp`}
           alt="Metromile Enterprise Report Designer UI"
           width="1444"
           height="994"
         />
         <Image
-          src={`${imgPath}/fnol.png`}
+          src={`${imgPath}/fnol.webp`}
           alt="Metromile Enterprise FNOL UI"
           width="1242"
           height="978"
@@ -327,13 +327,13 @@ export default function Metromile() {
           </p>
         </div>
         <Image
-          src={`${imgPath}/biz-card.png`}
+          src={`${imgPath}/biz-card.webp`}
           alt="Metromile Enterprise Logo Design"
           width="1040"
           height="608"
         />
         <Image
-          src={`${imgPath}/ebs-website.png`}
+          src={`${imgPath}/ebs-website.webp`}
           alt="Metromile Enterprise Marketing Website"
           width="2175"
           height="7112"
