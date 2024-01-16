@@ -19,10 +19,15 @@ const project = {
       },
     },
     {
+      name: "pinned",
+      title: "Pinned",
+      type: "boolean",
+    },
+    {
       name: "excerpt",
       title: "Excerpt",
       type: "string",
-      validation: (Rule: Rule) => Rule.max(48),
+      validation: (Rule: Rule) => Rule.max(512),
     },
     {
       name: "image",

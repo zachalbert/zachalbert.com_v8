@@ -1,5 +1,6 @@
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
+import { visionTool } from "@sanity/vision";
 
 import { resolveProductionUrl } from "./resolveProductionUrl";
 import schemas from "./sanity/schemas";
@@ -15,7 +16,7 @@ const config = defineConfig({
   basePath: "/admin",
   schema: { types: schemas },
   productionUrl: resolveProductionUrl,
-  plugins: [deskTool(), codeInput()],
+  plugins: [deskTool(), codeInput(), visionTool()],
 });
 
 export default config;

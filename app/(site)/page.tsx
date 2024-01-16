@@ -4,7 +4,9 @@ import Link from "next/link";
 import cx from "classnames";
 import SectionHeader from "./components/SectionHeader";
 import { Pen, TouchInteraction } from "@carbon/icons-react";
+import ProjectTile from "./components/ProjectTile";
 import { useEffect } from "react";
+import WritingTile from "./components/WritingTile";
 
 const emphasize = cx(
   "bg-gradient-to-br",
@@ -17,42 +19,8 @@ const emphasize = cx(
   "font-extrabold"
 );
 
-type ProjectTileProps = {
-  href: string;
-  title: string;
-  description: string;
-  imgPath: string;
-  width: number;
-  height: number;
-  priority?: boolean;
-};
-
-const ProjectTile: React.FC<ProjectTileProps> = ({
-  href,
-  title,
-  description,
-  imgPath,
-  width,
-  height,
-  priority,
-}) => {
-  return (
-    <Link href={href} className="block-link">
-      <Image
-        src={imgPath}
-        alt={description}
-        width={width}
-        height={height}
-        className="m-0"
-        priority={priority}
-      />
-      <div className="p-6">
-        <h3 className="mt-0 mb-2">{title}</h3>
-        <p className="m-0">{description}</p>
-      </div>
-    </Link>
-  );
-};
+// Remove caching for all fetch requests in this route
+export const revalidate = 0;
 
 export default async function Home() {
   const writings = await getWritings();
@@ -144,27 +112,12 @@ export default async function Home() {
       {writings.length > 0 && (
         <section className="border-t max-w-prose mx-auto" id="writing">
           <SectionHeader icon={Pen} headline="Writing" />
-          {writings.map((writing) => (
-            <Link
-              href={`/writing/${writing.slug}`}
-              key={writing._id}
-              className={cx("flex", "border-none")}
-            >
-              {writing.image && (
-                <Image
-                  src={writing.image}
-                  alt={writing.title}
-                  width={750}
-                  height={300}
-                  className={cx("object-cover", "w-1/5", "m-0")}
-                />
-              )}
-              <div className={cx("flex", "flex-col")}>
-                <h3>{writing.title}</h3>
-                {writing.excerpt && <p>{writing.excerpt}</p>}
-              </div>
-            </Link>
-          ))}
+
+          <div className="mt-12 grid gap-12">
+            {writings.map((writing) => (
+              <WritingTile key={writing._id} writing={writing} />
+            ))}
+          </div>
         </section>
       )}
     </article>

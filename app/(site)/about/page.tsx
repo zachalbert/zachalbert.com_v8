@@ -15,7 +15,7 @@ export default function About() {
     <article>
       <section className="container">
         <div className="max-w-prose mx-auto">
-          <h1>👋</h1>
+          <h1>Hi there 👋</h1>
           <p>
             I&apos;m Zac, and thanks for visiting. Currently, I am the{" "}
             <strong>Head of Design</strong> at{" "}
