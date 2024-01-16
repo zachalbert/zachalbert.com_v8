@@ -45,7 +45,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
             {overline}
           </span>
         )}
-        <h2 className="mb-0">{headline}</h2>
+        <h2 className="m-0">{headline}</h2>
       </div>
     </div>
   );

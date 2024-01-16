@@ -35,10 +35,11 @@
     xl:prose-h1:text-6xl
     xl:prose-h2:text-4xl
     prose-p:max-w-prose
+    prose-blockquote:font-light
+    prose-blockquote:font-serif
     prose-headings:max-w-prose
     prose-headings:text-gray-700
     dark:prose-headings:text-gray-400
-    prose-h2:mt-0
     prose-h5:uppercase
     prose-h5:text-xs
     prose-h5:tracking-widest

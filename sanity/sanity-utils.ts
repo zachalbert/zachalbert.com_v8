@@ -43,10 +43,11 @@ export async function getWritings(): Promise<Writing[]> {
         _createdAt,
         title,
         "slug": slug.current,
+        pinned,
         excerpt,
         "image": image.asset->url,
         content
-    }`
+    } | order(_createdAt desc) | order(pinned asc)`
   );
 }
 
@@ -57,6 +58,7 @@ export async function getWriting(slug: string): Promise<Writing> {
         _createdAt,
         title,
         "slug": slug.current,
+        pinned,
         "image": image.asset->url,
         content
     }`,

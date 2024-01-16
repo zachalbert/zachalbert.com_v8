@@ -1,3 +1,4 @@
+import cx from "classnames";
 import { client, getWriting } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
@@ -49,7 +50,11 @@ const ImageComponent = ({
 };
 
 const Code = ({ props }: any) => {
-  return <div>asdf{props}</div>;
+  return <div>{props}</div>;
+};
+
+type MarkProps = {
+  href?: string;
 };
 
 const components = {
@@ -78,28 +83,66 @@ export default async function Writing({ params }: Props) {
   }
 
   return (
-    <div>
-      <header className="flex justify-between items-center">
-        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-orange-400 to-purple-600 bg-clip-text text-transparent">
-          {writing.title}
-        </h1>
-      </header>
-
-      {writing.image && (
-        <Image
-          src={writing.image}
-          alt={writing.title}
-          width={1920}
-          height={1080}
-          className="mt-10 border-2 border-gray-700 object-cover rounded-xl"
-        />
-      )}
-
-      {writing.content && (
-        <div className="text-lg text-gray-700 mt-5">
-          <PortableText value={writing.content} components={components} />
+    <article>
+      <section className="container">
+        <div
+          className={cx(
+            "flex",
+            "justify-center",
+            "items-center",
+            "relative",
+            "mb-12"
+          )}
+        >
+          {writing.image && (
+            <>
+              <Image
+                src={writing.image}
+                alt={writing.title}
+                width={1920}
+                height={1080}
+                className="m-0"
+              />
+              <div
+                className={cx(
+                  "bg-gradient-to-b",
+                  "from-black/10",
+                  "via-black/50",
+                  "to-black/90",
+                  "absolute",
+                  "w-full",
+                  "h-full",
+                  "left-0",
+                  "top-0",
+                  "z-10",
+                  "rounded-xl",
+                  "hidden",
+                  "md:block"
+                )}
+              />
+            </>
+          )}
+          <h1
+            className={cx(
+              "absolute",
+              "!text-white",
+              "z-20",
+              "bottom-0",
+              "mb-24",
+              "hidden",
+              "md:block"
+            )}
+          >
+            {writing.title}
+          </h1>
         </div>
-      )}
-    </div>
+        <div className="max-w-prose mx-auto">
+          <h1 className="md:hidden">{writing.title}</h1>
+          {writing.content && (
+            <PortableText value={writing.content} components={components} />
+          )}
+        </div>
+      </section>
+    </article>
   );
 }
