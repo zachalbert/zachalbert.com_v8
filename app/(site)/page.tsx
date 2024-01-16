@@ -20,7 +20,7 @@ const emphasize = cx(
 );
 
 // Remove caching for all fetch requests in this route
-export const revalidate = 0;
+export const revalidate = 10;
 
 export default async function Home() {
   const writings = await getWritings();

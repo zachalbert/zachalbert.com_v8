@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 // Remove caching for all fetch requests in this route
-export const revalidate = 0;
+export const revalidate = 10;
 
 export default async function RootLayout({
   children,
