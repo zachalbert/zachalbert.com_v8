@@ -5,7 +5,6 @@ import cx from "classnames";
 import SectionHeader from "./components/SectionHeader";
 import { Pen, TouchInteraction } from "@carbon/icons-react";
 import ProjectTile from "./components/ProjectTile";
-import { useEffect } from "react";
 import WritingTile from "./components/WritingTile";
 
 const emphasize = cx(

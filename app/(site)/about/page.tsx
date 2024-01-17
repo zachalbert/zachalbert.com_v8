@@ -109,14 +109,6 @@ export default function About() {
             className={imgGridClasses}
           />
         </div>
-        {/* <Image
-              src="/photos/5.webp"
-              alt="Zac gives the Dad look to his coworker who just made a pun"
-              width="768"
-              height="1366"
-              className="m-0"
-            />
-          </div> */}
       </section>
     </article>
   );

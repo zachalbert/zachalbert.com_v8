@@ -46,6 +46,7 @@ export async function getWritings(): Promise<Writing[]> {
         pinned,
         excerpt,
         "image": image.asset->url,
+        "imageAlt": image.alt,
         content
     } | order(_createdAt desc) | order(pinned asc)`
   );
@@ -60,6 +61,7 @@ export async function getWriting(slug: string): Promise<Writing> {
         "slug": slug.current,
         pinned,
         "image": image.asset->url,
+        "imageAlt": image.alt,
         content
     }`,
     { slug }
