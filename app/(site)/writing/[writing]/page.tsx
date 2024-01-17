@@ -66,6 +66,10 @@ const components = {
   },
 };
 
+const titleComponents = {
+  block: ({ children }: any) => <>{children}</>,
+};
+
 type Props = {
   params: { writing: string };
 };
@@ -98,7 +102,7 @@ export default async function Writing({ params }: Props) {
             <>
               <Image
                 src={writing.image}
-                alt={writing.title}
+                alt={writing.imageAlt}
                 width={1920}
                 height={1080}
                 className="m-0"
@@ -133,11 +137,13 @@ export default async function Writing({ params }: Props) {
               "md:block"
             )}
           >
-            {writing.title}
+            <PortableText value={writing.title} components={titleComponents} />
           </h1>
         </div>
         <div className="max-w-prose mx-auto">
-          <h1 className="md:hidden">{writing.title}</h1>
+          <h1 className="md:hidden">
+            <PortableText value={writing.title} />
+          </h1>
           {writing.content && (
             <PortableText value={writing.content} components={components} />
           )}
