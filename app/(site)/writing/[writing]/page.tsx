@@ -5,11 +5,12 @@ import Image from "next/image";
 import urlBuilder from "@sanity/image-url";
 import { getImageDimensions } from "@sanity/asset-utils";
 import Refractor from "react-refractor";
-// Load any languages you want to use from `refractor`
 import js from "refractor/lang/javascript";
 import typescript from "refractor/lang/typescript";
 import tsx from "refractor/lang/tsx";
 import "../../prism-solarized-dark-atom.css";
+import type { Metadata, ResolvingMetadata } from "next";
+import { PortableTextBlock } from "sanity";
 
 Refractor.registerLanguage(js);
 Refractor.registerLanguage(typescript);
@@ -73,6 +74,37 @@ const titleComponents = {
 type Props = {
   params: { writing: string };
 };
+
+type Span = {
+  _type: "span";
+  text: string;
+};
+
+function toPlainText(blocks: PortableTextBlock[] = []) {
+  return blocks
+    .map((block) => {
+      if (block._type !== "block" || !block.children) {
+        return "";
+      }
+
+      const children = block.children as Span[];
+      return children.map((child) => child.text).join("");
+    })
+    .join("\n\n");
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = params.writing;
+  const data = await getWriting(slug);
+
+  return {
+    title: toPlainText(data.title) + " | Zac Halbert",
+    description: data.excerpt,
+  };
+}
 
 export default async function Writing({ params }: Props) {
   const slug = params.writing;
