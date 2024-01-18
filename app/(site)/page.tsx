@@ -110,12 +110,22 @@ export default async function Home() {
 
       {writings.length > 0 && (
         <section className="border-t max-w-prose mx-auto" id="writing">
-          <SectionHeader icon={Pen} headline="Writing" />
+          <SectionHeader
+            icon={Pen}
+            headline="Latest Writing"
+            actionText="See All"
+            actionLink="/writing"
+          />
 
-          <div className="mt-12 grid gap-12">
-            {writings.map((writing) => (
+          <div className="mt-12 grid gap-6">
+            {writings.slice(0, 1).map((writing) => (
               <WritingTile key={writing._id} writing={writing} />
             ))}
+            <div className="flex gap-8">
+              {writings.slice(1, 3).map((writing) => (
+                <WritingTile key={writing._id} writing={writing} size="sm" />
+              ))}
+            </div>
           </div>
         </section>
       )}

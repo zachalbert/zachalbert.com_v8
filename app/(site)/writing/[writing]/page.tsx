@@ -11,6 +11,7 @@ import tsx from "refractor/lang/tsx";
 import "../../prism-solarized-dark-atom.css";
 import type { Metadata, ResolvingMetadata } from "next";
 import { PortableTextBlock } from "sanity";
+import ArrowLink from "../../components/ArrowLink";
 
 Refractor.registerLanguage(js);
 Refractor.registerLanguage(typescript);
@@ -164,9 +165,13 @@ export default async function Writing({ params }: Props) {
               "!text-white",
               "z-20",
               "bottom-0",
-              "mb-24",
+              "mb-12",
+              "lg:mb-20",
+              "xl:mb-24",
               "hidden",
-              "md:block"
+              "md:block",
+              "px-12",
+              "xl:px-16"
             )}
           >
             <PortableText value={writing.title} components={titleComponents} />
@@ -180,6 +185,15 @@ export default async function Writing({ params }: Props) {
             <PortableText value={writing.content} components={components} />
           )}
         </div>
+      </section>
+
+      <section className="container border-t">
+        <ArrowLink
+          text="All writing"
+          url="/writing"
+          arrowDirection="left"
+          className="inline-flex"
+        />
       </section>
     </article>
   );

@@ -44,5 +44,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.5,
     },
+    {
+      url: "https://www.zachalbert.com/writing",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.zachalbert.com/writing/where-the-buck-actually-stops",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
+    {
+      url: "https://www.zachalbert.com/writing/receiving-feedback-without-fear",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
+    {
+      url: "https://www.zachalbert.com/writing/how-to-find-a-good-mentor",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
+    {
+      url: "https://www.zachalbert.com/writing/maintaining-strong-relationships-with-mentors",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
   ];
 }

@@ -30,8 +30,8 @@ const ProjectTile: React.FC<ProjectTileProps> = ({
         className="m-0"
         priority={priority}
       />
-      <div className="p-6">
-        <h3 className="mt-0 mb-2">{title}</h3>
+      <div className="py-4 px-5">
+        <h3 className="m-0">{title}</h3>
         <p className="m-0">{description}</p>
       </div>
     </Link>

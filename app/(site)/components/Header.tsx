@@ -91,7 +91,7 @@ const Header: React.FC<HeaderProps> = ({ writings = 0 }) => {
           Portfolio
         </Link>
         {writings > 0 && (
-          <Link href="/#writing" className={cx(navClasses, "px-4", "py-2")}>
+          <Link href="/writing" className={cx(navClasses, "px-4", "py-2")}>
             Writing
           </Link>
         )}
@@ -218,7 +218,7 @@ const Header: React.FC<HeaderProps> = ({ writings = 0 }) => {
             {writings > 0 && (
               <Link
                 onClick={() => setIsOpen(false)}
-                href="/#writing"
+                href="/writing"
                 className={cx(navClasses, navLinkClasses)}
               >
                 <Pen /> Writing
