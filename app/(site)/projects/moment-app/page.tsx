@@ -38,11 +38,11 @@ export default function MomentApp() {
       <section className="container">
         <div className="max-w-prose mx-auto">
           <h1>Moment.dev</h1>
-          <h2 className="text-lg opacity-60 mt-2">
+          <h2 className="text-lg mt-2">
             Founding Designer / Head of Design (2021 &ndash; present)
           </h2>
           <p>
-            I am the founding designer and first hire at{" "}
+            I was the founding designer and first hire at{" "}
             <Link
               href="https://www.moment.dev/"
               target="_blank"

@@ -43,7 +43,7 @@ export default function Metromile() {
       <section className="container">
         <div className="max-w-prose mx-auto">
           <h1>Metromile</h1>
-          <h2 className="text-lg opacity-60 mt-2">
+          <h2 className="text-lg mt-2">
             Head of Design, Enterprise (2018 &ndash; 2021)
           </h2>
           <p>

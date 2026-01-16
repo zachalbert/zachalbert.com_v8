@@ -26,7 +26,7 @@ export default function MomentBrand() {
       <section className="container">
         <div className="max-w-prose mx-auto">
           <h1>Moment.dev Branding</h1>
-          <h2 className="text-lg opacity-60 mt-2">
+          <h2 className="text-lg mt-2">
             Founding Designer / Head of Design (2021 &ndash; present)
           </h2>
           <p>

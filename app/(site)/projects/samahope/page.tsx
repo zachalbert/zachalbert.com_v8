@@ -38,9 +38,7 @@ export default function MomentApp() {
       <section className="container">
         <div className="max-w-prose mx-auto">
           <h1>Samahope</h1>
-          <h2 className="text-lg opacity-60 mt-2">
-            Head of Design (2012 &ndash; 2015)
-          </h2>
+          <h2 className="text-lg mt-2">Head of Design (2012 &ndash; 2015)</h2>
           <p>
             I was the Head of Design for a non-profit startup spun out of
             Samasource (now Sama), a non-profit that provided employment and

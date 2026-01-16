@@ -196,7 +196,7 @@ const Header: React.FC<HeaderProps> = ({ writings = 0 }) => {
           <div className="flex justify-between items-start">
             <div>
               <h3 className="my-1 text-2xl font-extrabold">Zac Halbert</h3>
-              <h4 className="font-bold opacity-60">Product Design Portfolio</h4>
+              <h4 className="opacity-80">Product Design Portfolio</h4>
             </div>
             <ThemeToggle className={cx(navClasses, "p-3")} />
           </div>
