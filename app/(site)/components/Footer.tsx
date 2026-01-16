@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="container flex justify-between items-center">
         <Logo monochrome />
         <span className="flex gap-1">
-          <span className="opacity-70">&copy; {currentYear},</span>
+          <span>&copy; {currentYear},</span>
           <Link
             href="/"
             className="px-1 hover:text-gray-800 dark:hover:text-gray-300 hover:underline"
