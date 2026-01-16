@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import cx from "classnames";
 import { getWritings } from "@/sanity/sanity-utils";
 import Footer from "./components/Footer";
+import { siteConfig } from "./config";
 
 export const metadata: Metadata = {
   title: "Product Design Portfolio | Zac Halbert",
@@ -23,7 +24,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const writings = await getWritings();
+  const writings = siteConfig.showWriting ? await getWritings() : [];
 
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>

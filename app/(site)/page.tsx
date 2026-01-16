@@ -1,10 +1,12 @@
-// import { getWritings } from "@/sanity/sanity-utils";
+import { getWritings } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 import cx from "classnames";
 import SectionHeader from "./components/SectionHeader";
-import { TouchInteraction } from "@carbon/icons-react";
+import { Pen, TouchInteraction } from "@carbon/icons-react";
 import ProjectTile from "./components/ProjectTile";
+import WritingTile from "./components/WritingTile";
+import { siteConfig } from "./config";
 
 const emphasize = cx(
   "bg-gradient-to-br",
@@ -21,7 +23,7 @@ const emphasize = cx(
 export const revalidate = 10;
 
 export default async function Home() {
-  // const writings = await getWritings();
+  const writings = siteConfig.showWriting ? await getWritings() : [];
 
   return (
     <article className="container">
@@ -101,8 +103,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* 1/16/2026: Until I can figure out what I want to be when I grow up, I'm going to hide these. */}
-      {/* {writings.length > 0 && (
+      {writings.length > 0 && (
         <section className="border-t max-w-prose mx-auto" id="writing">
           <SectionHeader
             icon={Pen}
@@ -122,7 +123,7 @@ export default async function Home() {
             </div>
           </div>
         </section>
-      )} */}
+      )}
     </article>
   );
 }

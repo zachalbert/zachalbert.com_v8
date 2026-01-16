@@ -15,7 +15,7 @@ export default function Logo({
     "opacity-40",
     "transition-all",
     "duration-500",
-    "ease-in",
+    "ease-in-out",
     "group-hover:opacity-60",
     "group-active:opacity-80",
     "pointer-events-none",

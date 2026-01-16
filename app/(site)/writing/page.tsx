@@ -3,6 +3,8 @@ import cx from "classnames";
 import { Pen } from "@carbon/icons-react";
 import WritingTile from "../components/WritingTile";
 import SectionHeader from "../components/SectionHeader";
+import { siteConfig } from "../config";
+import { notFound } from "next/navigation";
 
 const emphasize = cx(
   "bg-gradient-to-br",
@@ -19,6 +21,10 @@ const emphasize = cx(
 export const revalidate = 10;
 
 export default async function Writings() {
+  if (!siteConfig.showWriting) {
+    notFound();
+  }
+
   const writings = await getWritings();
 
   return (

@@ -12,6 +12,8 @@ import "../../prism-solarized-dark-atom.css";
 import type { Metadata, ResolvingMetadata } from "next";
 import { PortableTextBlock } from "sanity";
 import ArrowLink from "../../components/ArrowLink";
+import { siteConfig } from "../../config";
+import { notFound } from "next/navigation";
 
 Refractor.registerLanguage(js);
 Refractor.registerLanguage(typescript);
@@ -108,6 +110,10 @@ export async function generateMetadata(
 }
 
 export default async function Writing({ params }: Props) {
+  if (!siteConfig.showWriting) {
+    notFound();
+  }
+
   const slug = params.writing;
   const writing = await getWriting(slug);
 
