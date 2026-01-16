@@ -1,11 +1,10 @@
 import "../globals.css";
-import Link from "next/link";
+import "./prism-solarized-dark-atom.css";
 import type { Metadata } from "next";
 import { Providers } from "./providers";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "./components/Header";
-import cx from "classnames";
 import { getWritings } from "@/sanity/sanity-utils";
 import Footer from "./components/Footer";
 import { siteConfig } from "./config";

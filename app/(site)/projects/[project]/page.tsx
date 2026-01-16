@@ -8,7 +8,6 @@ import Refractor from "react-refractor";
 import js from "refractor/lang/javascript";
 import typescript from "refractor/lang/typescript";
 import tsx from "refractor/lang/tsx";
-import "../../prism-solarized-dark-atom.css";
 
 Refractor.registerLanguage(js);
 Refractor.registerLanguage(typescript);

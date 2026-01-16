@@ -8,7 +8,6 @@ import Refractor from "react-refractor";
 import js from "refractor/lang/javascript";
 import typescript from "refractor/lang/typescript";
 import tsx from "refractor/lang/tsx";
-import "../../prism-solarized-dark-atom.css";
 import type { Metadata, ResolvingMetadata } from "next";
 import { PortableTextBlock } from "sanity";
 import ArrowLink from "../../components/ArrowLink";
