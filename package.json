@@ -2,6 +2,9 @@
   "name": "zachalbert.com",
   "version": "8.0.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
