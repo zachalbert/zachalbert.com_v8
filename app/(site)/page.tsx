@@ -42,13 +42,13 @@ export default async function Home() {
         </div>
 
         <p>
-          I am currently the <strong>Head of Design</strong> at{" "}
+          I currently lead Product Design at{" "}
           <Link
-            href="https://www.moment.dev/"
+            href="https://www.cortex.io/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Moment.dev
+            Cortex
           </Link>
           . I&apos;m also a product design leader, mentor, frontend developer,
           and entrepreneur with nearly two decades of experience, 8 in design
