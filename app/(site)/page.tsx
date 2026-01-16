@@ -1,11 +1,10 @@
-import { getWritings } from "@/sanity/sanity-utils";
+// import { getWritings } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 import cx from "classnames";
 import SectionHeader from "./components/SectionHeader";
-import { Pen, TouchInteraction } from "@carbon/icons-react";
+import { TouchInteraction } from "@carbon/icons-react";
 import ProjectTile from "./components/ProjectTile";
-import WritingTile from "./components/WritingTile";
 
 const emphasize = cx(
   "bg-gradient-to-br",
@@ -22,7 +21,7 @@ const emphasize = cx(
 export const revalidate = 10;
 
 export default async function Home() {
-  const writings = await getWritings();
+  // const writings = await getWritings();
 
   return (
     <article className="container">
@@ -51,16 +50,10 @@ export default async function Home() {
             Cortex
           </Link>
           . I&apos;m also a product design leader, mentor, frontend developer,
-          and entrepreneur with nearly two decades of experience, 8 in design
-          leadership and management. I also volunteer as a design mentor:{" "}
-          <Link
-            href="https://adplist.org/mentors/zac-halbert"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            book time with me&nbsp;on&nbsp;ADPList
-          </Link>
-          .
+          and entrepreneur with two decades of experience, 10 in design
+          leadership and management. I most enjoy starting and scaling design
+          teams, and have had the privilege to mentor hundreds of designers
+          throughout my career.
         </p>
       </section>
 
@@ -108,7 +101,8 @@ export default async function Home() {
         </div>
       </section>
 
-      {writings.length > 0 && (
+      {/* 1/16/2026: Until I can figure out what I want to be when I grow up, I'm going to hide these. */}
+      {/* {writings.length > 0 && (
         <section className="border-t max-w-prose mx-auto" id="writing">
           <SectionHeader
             icon={Pen}
@@ -128,7 +122,7 @@ export default async function Home() {
             </div>
           </div>
         </section>
-      )}
+      )} */}
     </article>
   );
 }
