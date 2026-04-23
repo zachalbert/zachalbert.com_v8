@@ -17,17 +17,16 @@ export default function About() {
         <div className="max-w-prose mx-auto">
           <h1>Hi there 👋</h1>
           <p>
-            I&apos;m Zac, and thanks for visiting. Currently, I am the{" "}
-            <strong>Head of Design</strong> at{" "}
+            I&apos;m Zac, and thanks for visiting. Currently, I am a{" "}
+            <strong>Director of UX</strong> at{" "}
             <Link
-              href="https://www.moment.dev/"
+              href="https://launchdarkly.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Moment.dev
+              LaunchDarkly
             </Link>
-            , where I&apos;m part of a team designing tools for infrastructure
-            engineers.{" "}
+            , where I&apos;m part of a team making it safer to ship code.{" "}
             <Link
               href="https://www.linkedin.com/in/zachalbert/"
               target="_blank"
@@ -49,17 +48,9 @@ export default function About() {
           </p>
           <p>
             I have over 6 years experience managing design teams, and have
-            mentored over 500 designers throughout my career (currently,
-            I&apos;m a{" "}
-            <Link
-              href="https://adplist.org/mentors/zac-halbert"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              top 1% mentor on ADPList
-            </Link>
-            ). While I have worked on dozens of interesting projects, I am most
-            proud of my work as a manager and mentor unlocking the talents of
+            mentored over 500 designers throughout my career. While I have
+            worked on dozens of interesting projects, I am most proud of my work
+            as a manager and mentor unlocking the talents of
             other&nbsp;designers.
           </p>
           <p>

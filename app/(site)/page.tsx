@@ -16,7 +16,7 @@ const emphasize = cx(
   "to-violet-500",
   "bg-clip-text",
   "text-transparent",
-  "font-extrabold"
+  "font-extrabold",
 );
 
 // Remove caching for all fetch requests in this route
@@ -43,18 +43,18 @@ export default async function Home() {
         </div>
 
         <p>
-          I currently lead Product Design at{" "}
+          I am currently a Director of UX at{" "}
           <Link
-            href="https://www.cortex.io/"
+            href="https://launchdarkly.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Cortex
+            LaunchDarkly
           </Link>
           . I&apos;m also a product design leader, mentor, frontend developer,
-          and entrepreneur with two decades of experience, 10 in design
-          leadership and management. I most enjoy starting and scaling design
-          teams, and have had the privilege to mentor hundreds of designers
+          and entrepreneur with over 20 years of experience, and 10 in
+          management. I enjoy starting and scaling design teams, enabling
+          designers, and have had the privilege to mentor hundreds of designers
           throughout my career.
         </p>
       </section>
